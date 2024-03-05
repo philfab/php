@@ -29,7 +29,7 @@ $personnes = array(
 
 function triPrenoms($a, $b)
 {
-    return strcmp($a["prenom"], $b["prenom"]); //strcmp renvoie posisif, negatif ou 0 pour tri
+    return strcmp($a["prenom"], $b["prenom"]); //strcmp renvoie posisif, negatif ou 0 pour tri (ordre lexicographique)
 }
 
 usort($personnes, "triPrenoms"); //réorganise le tableau en fonction du retour de triPrenoms
