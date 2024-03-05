@@ -15,30 +15,65 @@
 
 class Personne
 {
-    public $nom;
-    public $prenom;
-    public $dateNaissance;
+    private string $_nom;
+    private string  $_prenom;
+    private DateTime $_dateNaissance;
 
-    public function __construct($nom, $prenom, $age)
+    public function __construct(string $nom, string $prenom, string $age)
     {
-        $this->nom = $nom;
-        $this->prenom = $prenom;
-        $this->dateNaissance = new DateTime($age);
+        $this->_nom = $nom;
+        $this->_prenom = $prenom;
+        $this->_dateNaissance = new DateTime($age);
     }
 
-    private function CalculerAge()
+    private function CalculerAge(): int
     {
-        return $this->dateNaissance->diff(new DateTime());
+        return $this->_dateNaissance->diff(new DateTime())->y;
     }
-    public function AfficheInfos()
+    public function AfficheInfos(): string
     {
-        $age = $this->CalculerAge()->y;
-        echo $this->prenom . ' ' . $this->nom . " a " . $age . " ans<br>";
+        $age = $this->CalculerAge();
+        return $this->_prenom . ' ' . $this->_nom . " a " . $age . " ans";
+    }
+
+    //méthode spéciale en PHP appelée lorsqu'un objet est converti en chaîne de caractères
+    public function __toString(): string
+    {
+        return $this->afficheInfos();
+    }
+    public function getNom(): string
+    {
+        return $this->_nom;
+    }
+
+    public function setNom(string $nom): void
+    {
+        $this->_nom = $nom;
+    }
+
+    public function getPrenom(): string
+    {
+        return $this->_prenom;
+    }
+
+    public function setPrenom(string $prenom): void
+    {
+        $this->_prenom = $prenom;
+    }
+
+    public function getDateNaissance(): DateTime
+    {
+        return $this->_dateNaissance;
+    }
+
+    public function setDateNaissance(DateTime $dateNaissance): void
+    {
+        $this->_dateNaissance = $dateNaissance;
     }
 }
 
 $p1 = new Personne("DUPONT", "Michel", "1980-02-19");
 $p2 = new Personne("DUCHEMIN", "Alice", "1985-01-17");
 
-echo $p1->AfficheInfos();
-echo $p2->AfficheInfos();
+echo $p1 . '<br>';
+echo $p2;

@@ -20,4 +20,4 @@ $now = new DateTime();
 // utilisable dans les deux sens ($now->...)
 $diff = $dateNaissance->diff($now);
 
-echo "Age de la personne : $diff->y ans $diff->m mois $diff->d jours";
+echo "Age de la personne" . $diff->format("%y ans %m mois %d jours");

@@ -45,6 +45,8 @@ foreach ($personnes as $personne) {
         case "ENG":
             echo "Hello ";
             break;
+        default:
+            echo "Hello "; // anglais par défaut
     }
     echo $personne["prenom"] . "<br>";
 }
