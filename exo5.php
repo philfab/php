@@ -14,7 +14,7 @@
 <?php
 
 $francs = 100;
-$taux = 0.152449; //on peut aussi retrouver le taux avec une api (json_decode), mais le franc est obsolète donc dur à trouver.
+$taux = 0.152449; //on peut aussi retrouver le taux avec une api , mais le franc est obsolète donc dur à trouver.
 
 //round = arrondi (ici 2 décimales)
 $euros =  round($francs * $taux, 2);
