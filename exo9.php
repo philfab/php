@@ -29,11 +29,9 @@ else
 
 function imposable($age, $sexe)
 {
-    if ($sexe === 'F' && $age >= 18 && $age <= 35) {
+    if (($sexe === 'F' && $age >= 18 && $age <= 35) || ($sexe === 'M' && $age > 20))
         return true;
-    } elseif ($sexe === 'M' && $age > 20) {
-        return true;
-    } else {
+    else {
         return false;
     }
 }
