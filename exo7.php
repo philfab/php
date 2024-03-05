@@ -23,16 +23,16 @@ $categorie = getCategory($age_kid);
 echo "L'enfant de $age_kid ans est dans la catégorie : $categorie";
 function getCategory($age)
 {
-    switch ($age) {
-        case ($age >= 6 && $age <= 7):
-            return "Poussin";
-        case ($age >= 8 && $age <= 9):
-            return "Pupille";
+    switch (true) {
+        case ($age >= 12 && $age <= 17):
+            return "Cadet";
         case ($age >= 10 && $age <= 11):
             return "Minime";
-        case ($age >= 12 && $age <= 17): // au dessus de 17 c junior
-            return "Cadet";
+        case ($age >= 8 && $age <= 9):
+            return "Pupille";
+        case ($age >= 6 && $age <= 7):
+            return "Poussin";
         default:
-            return "L'enfant de rentre dans aucune catégorie !";
+            return "L'enfant ne rentre dans aucune catégorie !";
     }
 }

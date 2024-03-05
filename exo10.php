@@ -14,13 +14,13 @@
 <?php
 
 $aPayer = 152;
-$Verse = 200;
+$verse = 200;
 
 echo "Montant à payer : $aPayer €<br>";
-echo "Montant versé : $Verse €<br>";
-echo "Reste à rendre : " . ($Verse - $aPayer) . " €<br>"; // . . > concat chaines
+echo "Montant versé : $verse €<br>";
+echo "Reste à rendre : " . ($verse - $aPayer) . " €<br>"; // . . > concat chaines
 
-rendu($aPayer, $Verse);
+rendu($aPayer, $verse);
 function rendu($mAPayer, $mVerse)
 {
 
