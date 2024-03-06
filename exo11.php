@@ -11,7 +11,7 @@
 </h2>
 
 <?php
-$tabMarques = array("Peugeot", "Renault", "BMW", "Mercedes");
+$tabMarques = ["Peugeot", "Renault", "BMW", "Mercedes"];
 $nMarques = count($tabMarques);
 
 echo "Il y a $nMarques marques de voitures dans le tableau : <br><ul>";
