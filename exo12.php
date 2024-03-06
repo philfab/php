@@ -12,20 +12,12 @@
 
 <?php
 
-$personnes = array(
-    array(
-        "prenom" => "Mickaël",
-        "pays" => "FRA"
-    ),
-    array(
-        "prenom" => "Virgile",
-        "pays" => "ESP"
-    ),
-    array(
-        "prenom" => "Marie-Claire",
-        "pays" => "ENG"
-    )
-);
+$personnes =
+   [
+    ["prenom" => "Mickaël", "pays" => "FRA"],
+    ["prenom" => "Virgile","pays" => "ESP"],
+    ["prenom" => "Marie-Claire","pays" => "ENG"]
+   ];
 
 function triPrenoms($a, $b)
 {
