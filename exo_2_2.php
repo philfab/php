@@ -15,7 +15,7 @@
 <?php
 
 $capitales = ["France" => "Paris", "Allemagne" => "Berlin", "USA" => "Washington", "Italie" => "Rome"];
-asort($capitales); //tri ascendant par rapport à la valeur (ksort = rapport à la clef)
+ksort($capitales); //tri ascendant par rapport à la valeur (ksort = rapport à la clef)
 echo '<table  border="1">';
 echo afficherTableHTML($capitales);
 echo "</table>";
