@@ -3,7 +3,7 @@
  Classe Voiture 
  - Attributs : marque, modele, nbPortes, vitesseActuelle
  - Methodes : Demarrer(), Accelerer(), Stopper(), AfficheInfos(), AfficheVitesse()
- - Constructeur : __construct(string $marque, string $modele, int $nbPortes)
+ - constructeur : __construct(string $marque, string $modele, int $nbPortes = 5)
  - Accesseurs : getMarque(), getModele(), getNbPortes(), getVitesseActuelle()
  - Mutateurs : setMarque(string $marque), setModele(string $modele), setNbPortes(int $nbPortes)
 */
