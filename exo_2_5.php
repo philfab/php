@@ -14,7 +14,7 @@
 <?php
 
 $nomsInput = ["Nom", "Prénom", "Ville"];
-echo "<form>";
+echo "<form method='post' action='#'>";
 afficherInput($nomsInput);
 echo "</form";
 
@@ -22,6 +22,6 @@ function afficherInput($nomsInput)
 {
     foreach ($nomsInput as $nom) {
         echo "<label for='$nom'>$nom</label><br>";
-        echo "<input type='text' name='$nom'><br>";
+        echo "<input type='text' name='$nom' id='$nom'><br>";
     }
 }

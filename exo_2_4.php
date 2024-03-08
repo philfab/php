@@ -23,7 +23,7 @@ echo '<table  border="1">';
 echo afficherTableHTML($capitales);
 echo "</table>";
 
-function afficherTableHTML($capitales)
+function afficherTableHTML(array $capitales)
 {
     echo "
     <tr>

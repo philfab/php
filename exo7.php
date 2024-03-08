@@ -26,11 +26,11 @@ function getCategory($age)
     switch (true) {
         case ($age >= 12 && $age <= 17):
             return "Cadet";
-        case ($age >= 10 && $age <= 11):
+        case ($age >= 10):
             return "Minime";
-        case ($age >= 8 && $age <= 9):
+        case ($age >= 8):
             return "Pupille";
-        case ($age >= 6 && $age <= 7):
+        case ($age >= 6):
             return "Poussin";
         default:
             return "L'enfant ne rentre dans aucune catégorie !";

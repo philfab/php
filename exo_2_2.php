@@ -16,25 +16,27 @@
 
 $capitales = ["France" => "Paris", "Allemagne" => "Berlin", "USA" => "Washington", "Italie" => "Rome"];
 ksort($capitales); //tri ascendant par rapport à la valeur (ksort = rapport à la clef)
-echo '<table  border="1">';
 echo afficherTableHTML($capitales);
-echo "</table>";
-function afficherTableHTML($capitales)
+
+function afficherTableHTML(array $capitales)
 {
-    echo "
+    $result="
+    <table border=1>
+    <thead>
     <tr>
       <th>Pays</td>
-      <th>Capitale</td>
+      <th>Capitales</td>
     </tr>
-     ";
+    </thead>
+    <tbody>";
     foreach ($capitales as $pays => $ville) {
-        echo "
+        $result.= "
         <tr>
          <td>" . mb_strtoupper($pays) . "</td>
          <td>$ville</td>
-        </tr>
-        ";
+        </tr>";
     }
+    return $result .= "</tbody></table>";
 }
 
 ?>
