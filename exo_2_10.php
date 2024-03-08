@@ -19,24 +19,20 @@
 $datas = ["nom", "prénom", "adresse", "e-mail", "ville", "sexe"];
 $intitules = ["Developpeur Logiciel", "Designer web", "Intégrateur", "Chef de projet"];
 
-echo "<form method='post'>";
-afficheData($datas);
-echo "<br>";
-afficheIntitule($intitules);
-echo "<br><br><input type='submit' value='Envoyer'>";
-echo "</form>";
+echo CreateForm($datas, $intitules);
 
-function afficheData($datas)
-{
+function CreateForm($datas, $intitules){
+
+    $result = "<form method='post'>";
     foreach ($datas as $value) {
-        echo "<label for='$value'>$value</label><br>";
-        echo "<input type='text' name='$value'><br>";
+        $result .= "<label for='$value'>$value</label><br>
+                    <input type='text' name='$value'><br>";
     }
-}
-function afficheIntitule($intitules)
-{
-    echo "<select name=\"intitule\">";
+
+    $result .= "<br><select name=\"intitule\">";
+
     foreach ($intitules as $value)
-        echo "<option value='$value'>$value</option>";
-    echo "</select>";
+    $result .= "<option value='$value'>$value</option>";
+
+    return $result .= "</select><br><br><input type='submit' value='Envoyer'></form>";
 }

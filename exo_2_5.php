@@ -14,14 +14,18 @@
 <?php
 
 $nomsInput = ["Nom", "Prénom", "Ville"];
-echo "<form method='post' action='#'>";
-afficherInput($nomsInput);
-echo "</form";
+echo afficherInput($nomsInput);
 
 function afficherInput($nomsInput)
 {
+    $result="
+    <form method='post' action='#'>";
+
     foreach ($nomsInput as $nom) {
-        echo "<label for='$nom'>$nom</label><br>";
-        echo "<input type='text' name='$nom' id='$nom'><br>";
+        $result.= "
+         <label for='$nom'>$nom</label><br>
+         <input type='text' name='$nom' id='$nom'><br>";
     }
+
+    return $result.="</form>";
 }

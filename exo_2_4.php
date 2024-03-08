@@ -19,22 +19,24 @@ $capitales = [
 ];
 
 ksort($capitales); //tri ascendant par rapport à la valeur clef
-echo '<table  border="1">';
 echo afficherTableHTML($capitales);
-echo "</table>";
 
 function afficherTableHTML(array $capitales)
 {
-    echo "
+    $result="
+    <table border=1>
+    <thead>
     <tr>
       <th>Pays</td>
-      <th>Capitale</td>
+      <th>Capitales</td>
       <th>Lien wiki</td>
     </tr>
-     ";
+    </thead>
+    <tbody>";
+
     foreach ($capitales as $pays => $ville) {
         $lienwiki = "https://fr.wikipedia.org/wiki/" . $ville;
-        echo "
+        $result.= "
         <tr>
          <td>" . mb_strtoupper($pays) . "</td>
          <td>$ville</td>
@@ -42,4 +44,5 @@ function afficherTableHTML(array $capitales)
         </tr>
         ";
     }
+    return $result .= "</tbody></table>";
 }

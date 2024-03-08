@@ -14,12 +14,12 @@
 
 <?php
 $elements = ["Monsieur", "Madame", "Mademoiselle"];
-echo "<select>";
-alimenterListeDeroulante($elements);
-echo "</select>";;
+echo alimenterListeDeroulante($elements);
 function alimenterListeDeroulante($elements)
 {
+    $result = "<select>";
     foreach ($elements as $element) {
-        echo "<option>$element</option>";
+        $result .= "<option>$element</option>";
     }
+    return $result .= "</select>";
 }
