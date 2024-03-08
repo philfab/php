@@ -33,23 +33,10 @@ function triPrenoms($a, $b)
 usort($personnes, "triPrenoms"); //réorganise le tableau en fonction du retour de triPrenoms
 
 foreach ($personnes as $personne) {
-    // switch ($personne["pays"]) {
-    //     case "FRA":
-    //         echo "Salut ";
-    //         break;
-    //     case "ESP":
-    //         echo "Hola ";
-    //         break;
-    //     case "ENG":
-    //         echo "Hello ";
-    //         break;
-    //     default:
-    //         echo "Hello "; // anglais par défaut
-    // }
-    // echo $personne["prenom"] . "<br>";
+
     if(array_key_exists($personne["pays"], $salutations)) {
-        echo $salutations($personne["pays"]) . $personne["prenom"] . "<br>";
-    } else {
+        echo $salutations[$personne["pays"]] . $personne["prenom"] . "<br>";
+    } else 
         echo "La langue n'est pas supportée !";
-    }
+    
 }

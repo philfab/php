@@ -14,10 +14,13 @@
 
 <?php
 $url = "http://my.mobirise.com/data/userpic/764.jpg";
-repeterImage($url, 4);
+echo repeterImage($url, 4);
 function repeterImage($url, $nb)
 {
+    $result="";
     for ($i = 0; $i < $nb; $i++) {
-        echo "<img src='$url' height='250'>";
+        $result.= "<img src='$url' height='250px'>";
     }
+
+    return $result;
 }

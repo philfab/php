@@ -16,23 +16,58 @@
 </h2>
 <?php
 
-$datas = ["nom", "prénom", "adresse", "e-mail", "ville", "sexe"];
+$datas = ["nom", "prénom", "adresse", "e-mail", "ville"];
 $intitules = ["Developpeur Logiciel", "Designer web", "Intégrateur", "Chef de projet"];
+$genres = ["Homme", "Femme", "Autre"];
 
-echo CreateForm($datas, $intitules);
+echo CreateForm($datas, $intitules,$genres);
 
-function CreateForm($datas, $intitules){
+function CreateForm($datas, $intitules,$genres){
 
     $result = "<form method='post'>";
-    foreach ($datas as $value) {
-        $result .= "<label for='$value'>$value</label><br>
-                    <input type='text' name='$value'><br>";
-    }
 
-    $result .= "<br><select name=\"intitule\">";
+    $result .= DisplayDatas($datas);
+    $result .= DisplayGenres($genres);
+    $result .= DisplayIntitules($intitules);
+    
+
+    $result .= "<br><input type='submit' value='Envoyer'></form>";
+
+    return $result;
+}
+
+function DisplayDatas($datas)
+{
+    $result = "";
+
+    foreach ($datas as $value)
+     $result .= 
+    "<label for='$value'>$value</label><br>
+    <input type='text' name='$value'><br>";
+
+    return $result;
+}
+
+function DisplayIntitules ($intitules)
+{
+    $result = "<br><select name=\"intitule\">";
 
     foreach ($intitules as $value)
-    $result .= "<option value='$value'>$value</option>";
+     $result .= "<option value='$value'>$value</option>";
 
-    return $result .= "</select><br><br><input type='submit' value='Envoyer'></form>";
+    $result .= "</select><br>";
+    return $result;
 }
+
+function DisplayGenres ($genres)  {  
+
+    $result = "<br><select name=\"genre\">";
+
+    foreach ($genres as $value)
+     $result .= "<option value='$value'>$value</option>";
+
+    $result .= "</select><br>";
+    return $result;
+}
+
+

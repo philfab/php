@@ -19,7 +19,7 @@ function alimenterListeDeroulante($elements)
 {
     $result = "<select>";
     foreach ($elements as $element) {
-        $result .= "<option>$element</option>";
+        $result .= "<option value='$element'>$element</option>";
     }
     return $result .= "</select>";
 }

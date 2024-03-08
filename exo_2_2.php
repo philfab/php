@@ -36,7 +36,6 @@ function afficherTableHTML(array $capitales)
          <td>$ville</td>
         </tr>";
     }
-    return $result .= "</tbody></table>";
+    $result .= "</tbody></table>";
+    return $result;
 }
-
-?>

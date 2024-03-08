@@ -44,5 +44,6 @@ function afficherTableHTML(array $capitales)
         </tr>
         ";
     }
-    return $result .= "</tbody></table>";
+    $result .= "</tbody></table>";
+    return $result;
 }

@@ -21,6 +21,6 @@ function formaterDateFr($dateStr)
         IntlDateFormatter::formatObject(
             $dateTimeObj,
             'eeee d MMMM y',
-            'fr'
+            'fr_FR'
         );
 }

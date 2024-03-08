@@ -14,12 +14,14 @@
 
 <?php
 $elements = ["Choix 1" => false, "Choix 2" => true, "Choix 3" => false];
-genererCheckbox($elements);
+echo genererCheckbox($elements);
 
 function genererCheckbox($elements)
 {
+    $result="";
     foreach ($elements as $element => $value) {
         $checked = $value ? "checked" : "";
-        echo "<input type=\"checkbox\" name=\"$element\" id=\"$element\" $checked>$element<br>";
+        $result.= "<input type='checkbox' name='$element' id='$element' $checked>$element<br>";
     }
+    return $result;
 }

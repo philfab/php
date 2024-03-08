@@ -14,12 +14,14 @@
 
 <?php
 $elements = ["Masculin" => false, "Féminin" => false, "Autre" => true];
-afficherRadio($elements);
+echo afficherRadio($elements);
 function afficherRadio($elements)
 {
+    $result = "";
     foreach ($elements as $nom => $value) {
         $checked = $nom ? "checked" : null;
-        echo "<input type='radio' name='civilite' value='$nom' $checked> $nom<br>";
+        $result .= "<input type='radio' name='civilite' value='$nom' id='$nom' $checked> <label for='$nom'>$nom</label><br>";
     }
+    return $result;
 }
 ?>
