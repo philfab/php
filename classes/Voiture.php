@@ -7,92 +7,112 @@
  - Accesseurs : getMarque(), getModele(), getNbPortes(), getVitesseActuelle()
  - Mutateurs : setMarque(string $marque), setModele(string $modele), setNbPortes(int $nbPortes)
 */
-class Voiture {
+class Voiture
+{
     private string $marque;
     private string $modele;
     private int $nbPortes;
     private int $vitesseActuelle;
+    private bool $Move = false;
 
-    public function __construct(string $marque, string $modele, int $nbPortes = 5){
+    public function __construct(string $marque, string $modele, int $nbPortes = 5)
+    {
         $this->marque = $marque;
         $this->modele = $modele;
         $this->nbPortes = $nbPortes;
         $this->vitesseActuelle = 0;
     }
 
-    public function getMarque() : string{
+    public function getMarque(): string
+    {
         return $this->marque;
     }
 
-    public function getModele() : string{
+    public function getModele(): string
+    {
         return $this->modele;
     }
 
-    public function getNbPortes() : int{
+    public function getNbPortes(): int
+    {
         return $this->nbPortes;
     }
 
-    public function setMarque(string $marque){
+    public function setMarque(string $marque)
+    {
         $this->marque = $marque;
     }
 
-    public function setModele(string $modele){
+    public function getMove(): bool
+    {
+        return $this->Move;
+    }
+
+    public function setModele(string $modele)
+    {
         $this->modele = $modele;
     }
 
-    public function setNbPortes(int $nbPortes){
+    public function setNbPortes(int $nbPortes)
+    {
         $this->nbPortes = $nbPortes;
     }
 
-    public function getVitesseActuelle() : int{
+    public function getVitesseActuelle(): int
+    {
         return $this->vitesseActuelle;
     }
 
-    public function Demarrer(){
-        if ($this->vitesseActuelle == 0) 
-        {
-            $this->vitesseActuelle = 10;
+    public function Demarrer()
+    {
+        if (!$this->Move) {
+            $this->Move = true;
             echo "Le vehicule {$this->marque} {$this->modele} démarre<br>";
-        }
-            
-        else
+        } else
             echo "Le vehicule {$this->marque} {$this->modele} a deja demarré<br>";
     }
 
-    public function Accelerer(int $vitesse){
-        if ($this->vitesseActuelle == 0){
+    public function Accelerer(int $vitesse)
+    {
+        if (!$this->Move) {
             echo "Le véhicule {$this->marque} {$this->modele} veut accélérer de $vitesse km/h<br>";
             echo "Pour accélérer, il faut démarrer le vehicule {$this->marque} {$this->modele} !<br>";
-        }
-        else
-        {
+        } else {
             $this->vitesseActuelle += $vitesse;
             echo "Le vehicule {$this->marque} {$this->modele} accélére de $vitesse km/h<br>";
         }
-           
     }
 
-    public function Stopper(){
+    public function Stopper()
+    {
         $this->vitesseActuelle = 0;
+        $this->Move = false;
         echo "Le vehicule {$this->marque} {$this->modele} est stoppé<br>";
-
     }
 
-    public function Ralentir(int $vitesse){
-        
+    public function ralentir($vitesse)
+    {
+        if ($this->Move && $vitesse <= $this->vitesseActuelle) {
+            $this->vitesseActuelle -= $vitesse;
+            echo "Le véhicule " . $this->marque . " " . $this->modele . " ralentit de " . $vitesse . " km/h<br>";
+        } else if ($vitesse > $this->vitesseActuelle) {
+            echo "Le véhicule " . $this->marque . " " . $this->modele . " ne peut pas ralentir de " . $vitesse . " km/h car sa vitesse actuelle est seulement de " . $this->vitesseActuelle . " km/h<br>";
+        } else
+            echo "Le véhicule " . $this->marque . " " . $this->modele . " est stoppé<br>";
     }
 
-    public function AfficheVitesse(){
+    public function AfficheVitesse()
+    {
         echo "La vitesse du vehicule {$this->marque} {$this->modele} est de : {$this->vitesseActuelle} km/h <br>";
     }
 
-    public function AfficheInfos(){
-        $etat = $this->vitesseActuelle > 0 ? "est démarré" : "est à l'arrêt";
+    public function AfficheInfos()
+    {
+        $etat = $this->Move ? "est démarré" : "est à l'arrêt";
         echo "<br>
         Nom et modèle du vehicule : {$this->marque} {$this->modele}<br>
         Nombre de portes : {$this->nbPortes}<br>
         Le véhicule $this->marque $etat <br>
         Sa vitesse actuelle est de : {$this->vitesseActuelle} km/h<br>";
     }
-
 }

@@ -3,11 +3,11 @@
 </h1>
 
 <p>
-Créer une classe Voiture possédant les propriétés suivantes : marque, modèle, nbPortes et<br>
-vitesseActuelle ainsi que les méthodes demarrer( ), accelerer( ) et stopper( ) en plus <br>
-des accesseurs (get) et mutateurs (set) traditionnels. La vitesse initiale de chaque véhicule <br>
-instancié est de 0. Une méthode personnalisée pourra afficher toutes les informations d’un <br>
-véhicule. 
+    Créer une classe Voiture possédant les propriétés suivantes : marque, modèle, nbPortes et<br>
+    vitesseActuelle ainsi que les méthodes demarrer( ), accelerer( ) et stopper( ) en plus <br>
+    des accesseurs (get) et mutateurs (set) traditionnels. La vitesse initiale de chaque véhicule <br>
+    instancié est de 0. Une méthode personnalisée pourra afficher toutes les informations d’un <br>
+    véhicule.
 </p>
 
 <h2>
@@ -25,6 +25,7 @@ $v1->Accelerer(50);
 $v2->Demarrer();
 $v2->stopper();
 $v2->Accelerer(20);
+$v1->ralentir(10);
 
 $v1->AfficheVitesse();
 $v2->AfficheVitesse();
