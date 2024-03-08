@@ -11,11 +11,17 @@
     Résultat
 </h2>
 
+<style>
+    p {
+        color: red;
+    }
+</style>
+
 <?php
 
 $texte = "Mon texte en paramètre";
 echo convertirMajRouge($texte);
 function convertirMajRouge($texte)
 {
-    return "<p style='color: red;'>" . mb_strtoupper($texte) . "</p>";
+    return "<p>" . mb_strtoupper($texte) . "</p>";
 }

@@ -19,11 +19,11 @@ class Personne
     private string  $_prenom;
     private DateTime $_dateNaissance;
 
-    public function __construct(string $nom, string $prenom, string $age)
+    public function __construct(string $nom, string $prenom, string $dateNaissance)
     {
         $this->_nom = $nom;
         $this->_prenom = $prenom;
-        $this->_dateNaissance = new DateTime($age);
+        $this->_dateNaissance = new DateTime($dateNaissance);
     }
 
     private function CalculerAge(): int
@@ -37,7 +37,7 @@ class Personne
     }
 
     //méthode spéciale en PHP appelée lorsqu'un objet est converti en chaîne de caractères
-    public function __toString(): string
+    public function __toString()
     {
         return $this->afficheInfos();
     }
