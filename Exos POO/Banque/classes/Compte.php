@@ -69,9 +69,12 @@ class Compte{
         echo $result;
     }
 
-    public function __toString()
+    public function AfficheInfos()
     {
-        return $this->libelle . " : " . $this->solde  . $this->devise. " - Titulaire : " . $this->titulaire ;
+        return $this->libelle . " : " . $this->solde  . $this->devise. " - Titulaire : " 
+        . $this->titulaire->getNom() . " " . $this->titulaire->getPrenom() . "<br>";
     }
+
+
 
 }

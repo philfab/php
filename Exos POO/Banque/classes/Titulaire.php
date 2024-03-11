@@ -65,7 +65,7 @@ class Titulaire{
         array_push($this->comptes, $compte);
     }
 
-    public function __toString()
+    public function AfficheInfos()
     {
         $now = new DateTime();
         $diff = $this->dateNaissance->diff($now);

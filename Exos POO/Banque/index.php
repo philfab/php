@@ -28,15 +28,11 @@ $compte4= new Compte( "PEL", 1000000, "€", $titulaire2);
 $titulaire2->addCompte($compte3);
 $titulaire2->addCompte($compte4);
 
-echo "Titulaire1 : ". $titulaire1;
-echo "<br/>";
-echo "Titulaire2 : ". $titulaire2;
-echo "<br/>";
+echo "Titulaire1 : ". $titulaire1-> AfficheInfos() . "<br/>";
+echo "Titulaire2 : ". $titulaire2-> AfficheInfos() . "<br/>";
 
-echo "Compte 1 : <br/>".  $compte1;
-echo "<br/>";
-echo "Compte 4 : <br/>".  $compte4;
+echo "Compte 1 : <br/>".  $compte1-> AfficheInfos() . "<br/>";
+echo "Compte 4 : <br/>".  $compte4-> AfficheInfos() . "<br/>";
 
-echo "<br/>";
 echo $compte1->sendMoney($compte3, 500);
 
