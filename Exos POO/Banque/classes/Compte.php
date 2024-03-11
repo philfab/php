@@ -1,5 +1,12 @@
 <?php
-
+/*
+classe Compte
+    - Attributs : libelle, solde, devise, titulaire
+    - Methodes : getLibelle(), setLibelle(), getSolde(), setSolde(), getDevise(), setDevise(), getTitulaire(), setTitulaire(), envoyer(), debiter(), AfficheInfos()
+    - constructeur : __construct(string $libelle, float $solde, string $devise, Titulaire $titulaire)
+    - accesseurs : getLibelle(), setLibelle(), getSolde(), setSolde(), getDevise(), setDevise()
+    - mutateurs : setLibelle(string $libelle), setSolde(float $solde), setDevise(string $devise)
+*/
 class Compte{
 
     private string $libelle;
@@ -12,6 +19,7 @@ class Compte{
         $this->solde = $solde;
         $this->devise = $devise;
         $this->titulaire = $titulaire;
+        $titulaire->addCompte($this);
     }
 
     public function getLibelle(): string
@@ -29,9 +37,11 @@ class Compte{
         return $this->solde;
     }
 
-    public function setSolde(float $solde)
+    public function setSolde(float $montant)
     {
-        $this->solde = $solde;
+        $this->solde += $montant;
+        $result = "Le nouveau solde du compte est de " . $this->solde . " " . $this->devise . "<br><br>";
+        echo $result;
     }
 
     public function getDevise(): string
@@ -54,25 +64,21 @@ class Compte{
         $this->titulaire = $titulaire;
     }
 
-    public function sendMoney(Compte $destCompte,float $montant)
+    public function envoyer(Compte $destCompte,float $montant)
     {
-        echo "Un montant de " . $montant . " " . $this->devise . " est envoyé !" . PHP_EOL;
-        $destCompte->setMoney($montant);
+        echo "Le compte est crédité de " . $montant . " " . $this->devise ."<br>";
+        $destCompte->setSolde($montant);
     }
 
-    public function setMoney(float $montant)
-    {
-        $this->solde += $montant;
-
-        $result = "<br>Le montant de " . $montant . " " . $this->devise . " a bien été transféré !" . PHP_EOL;
-        $result .= "Le nouveau solde du compte est de " . $this->solde . " " . $this->devise . PHP_EOL;
-        echo $result;
+    public function debiter (float $montant){
+        echo "Le compte est débité de " . $montant . " " . $this->devise ."<br>";
+        $this->setSolde(-$montant);
     }
 
     public function AfficheInfos()
     {
-        return $this->libelle . " : " . $this->solde  . $this->devise. " - Titulaire : " 
-        . $this->titulaire->getNom() . " " . $this->titulaire->getPrenom() . "<br>";
+        return $this->libelle . " : solde " . $this->solde  . $this->devise. " - Titulaire : " 
+        . $this->titulaire->getNom() . " " . $this->titulaire->getPrenom() . "<br><br>";
     }
 
 

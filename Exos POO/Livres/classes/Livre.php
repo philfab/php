@@ -1,4 +1,13 @@
 <?php
+/*
+classe Livre
+    - Attributs : titre, auteur, nbPages, prix, dateParution
+    - Methodes : getTitre(), setTitre(), getAuteur(), setAuteur(), getNbPages(), setNbPages(), getPrix(), setPrix(), getDateParution(), setDateParution(), __toString()
+    - Constructeur : __construct(string $titre, Auteur $auteur, int $nbPages, float $prix, DateTime $dateParution)
+    - Accesseurs : getTitre(), setTitre(), getAuteur(), setAuteur(), getNbPages(), setNbPages(), getPrix(), setPrix(), getDateParution(), setDateParution()
+    - Mutateurs : setTitre(string $titre), setAuteur(Auteur $auteur), setNbPages(int $nbPages), setPrix(float $prix), setDateParution(DateTime $dateParution)
+    - Fonctions : __toString()
+*/
 class Livre
 {
     private string $titre;

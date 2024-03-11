@@ -1,5 +1,12 @@
 <?php
-
+/*
+  Classe Titulaire
+  - Attributs : nom, prenom, dateNaissance, ville
+  - Methodes : getNom(), setNom(), getPrenom(), setPrenom(), getDateNaissance(), setDateNaissance(), getVille(), setVille(), getComptes(), addCompte(), AfficheInfos()
+  - Constructeur : __construct(string $nom, string $prenom, DateTime $dateNaissance, string $ville)
+  - Accesseurs : getNom(), setNom(), getPrenom(), setPrenom(), getDateNaissance(), setDateNaissance(), getVille(), setVille()
+  - Mutateurs : setNom(string $nom), setPrenom(string $prenom), setDateNaissance(DateTime $dateNaissance), setVille(string $ville)
+*/
 class Titulaire{
         private string $nom;
         private string $prenom;
@@ -69,10 +76,11 @@ class Titulaire{
     {
         $now = new DateTime();
         $diff = $this->dateNaissance->diff($now);
-        $result = $this->nom . " " . $this->prenom . ", né à " . $this->ville . " âgé de " . $diff->format("%y ans") . "<br>";
+        $result = $this->nom . " " . $this->prenom . ", né à " . $this->ville . ", âgé de " . $diff->format("%y ans") . "<br>";
         $result .= "Comptes du titulaire : <br>";
         foreach ($this->comptes as $compte) {
-            $result .= $compte->getLibelle() . " : " . $compte->getSolde() . $compte->getDevise() . " - Titulaire : " . $this->nom . " " . $this->prenom . "<br>";
+            $result .= " - " . $compte->getLibelle() . " : solde " . $compte->getSolde() . $compte->getDevise() 
+            . " - Titulaire : " . $this->nom . " " . $this->prenom . "<br>";
         }
     
         return $result;

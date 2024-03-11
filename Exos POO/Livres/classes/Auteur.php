@@ -1,4 +1,13 @@
 <?php
+/*
+classe Auteur
+    - Attributs : nom, prenom, livres
+    - Methodes : getNom(), setNom(), getPrenom(), setPrenom(), afficherBibliographie(), getLivres(), addLivre()
+    - constructeur : __construct(string $nom, string $prenom)
+    - Accesseurs : getNom(), setNom(), getPrenom(), setPrenom()
+    - Mutateurs : setNom(string $nom), setPrenom(string $prenom)
+    - Fonctions : afficherBibliographie(), getLivres(), addLivre()
+*/
 class Auteur{
     private string $nom;
     private string $prenom;
