@@ -14,6 +14,7 @@ class Livre
         $this->nbPages = $nbPages;
         $this->prix = $prix;
         $this->dateParution = $dateParution;
+        $auteur->addLivre($this);
     }
 
     public function getTitre(): string

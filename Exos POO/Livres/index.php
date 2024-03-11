@@ -16,15 +16,13 @@ complète d’un auteur.
 require "classes/Auteur.php";
 require "classes/Livre.php";
 
+
 $auteur = new Auteur("Stephen","King");
 
-$livresStephenKing = [
-    new Livre("Ca",$auteur,1138,20, new DateTime("1986-01-01")), 
-    new Livre("Simetierre",$auteur,374,15, new DateTime("1983-01-01")), 
-    new Livre("Le Fléau",$auteur,823,14, new DateTime("1978-01-01")), 
-    new Livre("Shining",$auteur,447,16, new DateTime("1977-01-01")), 
-    ];  
-
-$auteur ->setLivres($livresStephenKing);
+$l1= new Livre("Ca",$auteur,1138,20, new DateTime("1986-01-01"));
+$l2= new Livre("Simetierre",$auteur,374,15, new DateTime("1983-01-01"));
+$l3= new Livre("Le Fléau",$auteur,823,14, new DateTime("1978-01-01"));
+$l4= new Livre("Shining",$auteur,447,16, new DateTime("1977-01-01"));
+  
 
 echo $auteur->afficherBibliographie();

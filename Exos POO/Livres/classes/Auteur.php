@@ -2,12 +2,13 @@
 class Auteur{
     private string $nom;
     private string $prenom;
-    private $livres = array();
+    private array $livres;
 
     public function __construct(string $nom, string $prenom)
     {
        $this->nom = $nom;
        $this->prenom = $prenom;  
+       $this->livres = [];
     }
 
     public function getNom(): string
@@ -51,7 +52,13 @@ class Auteur{
         return $this->livres;
     }
 
-    public function setLivres($livres){
-        $this->livres = $livres;
+    public function addLivre(Livre $livre)
+    {
+        array_push($this->livres, $livre);
+    }
+
+    public function __toString()
+    {
+        return $this->afficherBibliographie();
     }
 }
