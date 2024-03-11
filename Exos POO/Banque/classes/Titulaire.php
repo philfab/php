@@ -79,7 +79,8 @@ class Titulaire{
         $result = $this->nom . " " . $this->prenom . ", né à " . $this->ville . ", âgé de " . $diff->format("%y ans") . "<br>";
         $result .= "Comptes du titulaire : <br>";
         foreach ($this->comptes as $compte) {
-            $result .= " - " . $compte->getLibelle() . " : solde " . $compte->getSolde() . $compte->getDevise() 
+            $result .= " - " . $compte->getLibelle() . " : solde " 
+            . $compte->getSolde() . $compte->getDevise() 
             . " - Titulaire : " . $this->nom . " " . $this->prenom . "<br>";
         }
     

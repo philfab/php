@@ -32,8 +32,14 @@ echo "Titulaire2 : ". $titulaire2-> AfficheInfos() . "<br/>";
 echo "Compte 1 : <br/>".  $compte1-> AfficheInfos();
 echo "Compte 4 : <br/>".  $compte4-> AfficheInfos();
 
-// Envoi de fonds et debit
+// Envoi de fonds vers un compte
 $compte1->envoyer($compte3, 500);
+
+//crédit un compte
+$compte3->crediter(125);
+
+//débit un compte
 $compte1->debiter(100);
+
 
 

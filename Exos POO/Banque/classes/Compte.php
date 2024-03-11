@@ -66,12 +66,21 @@ class Compte{
 
     public function envoyer(Compte $destCompte,float $montant)
     {
-        echo "Le compte est crédité de " . $montant . " " . $this->devise ."<br>";
+        echo "Un montant de " . $montant . " " . $this->devise . " est envoyer vers le compte de " 
+        . $destCompte->getTitulaire()->getNom() . " " 
+        . $destCompte->getTitulaire()->getPrenom() ."<br>";
+        $this->setSolde(-$montant);
         $destCompte->setSolde($montant);
+    }
+    public function crediter (float $montant){
+        echo "Le compte de " . $this->titulaire-> getNom() . " " . $this->titulaire->getPrenom()  
+        . " est crédité de " . $montant . " " . $this->devise ."<br>";
+        $this->setSolde($montant);
     }
 
     public function debiter (float $montant){
-        echo "Le compte est débité de " . $montant . " " . $this->devise ."<br>";
+        echo "Le compte de " . $this->titulaire-> getNom() . " " . $this->titulaire->getPrenom()  
+        . " est débité de " . $montant . " " . $this->devise ."<br>";
         $this->setSolde(-$montant);
     }
 
