@@ -13,7 +13,7 @@ class Voiture
     private string $modele;
     private int $nbPortes;
     private int $vitesseActuelle;
-    private bool $Move = false;
+    private bool $move = false;
 
     public function __construct(string $marque, string $modele, int $nbPortes = 5)
     {
@@ -43,9 +43,9 @@ class Voiture
         $this->marque = $marque;
     }
 
-    public function getMove(): bool
+    public function getmove(): bool
     {
-        return $this->Move;
+        return $this->move;
     }
 
     public function setModele(string $modele)
@@ -63,18 +63,18 @@ class Voiture
         return $this->vitesseActuelle;
     }
 
-    public function Demarrer()
+    public function demarrer()
     {
-        if (!$this->Move) {
-            $this->Move = true;
+        if (!$this->move) {
+            $this->move = true;
             echo "Le vehicule {$this->marque} {$this->modele} démarre<br>";
         } else
             echo "Le vehicule {$this->marque} {$this->modele} a deja demarré<br>";
     }
 
-    public function Accelerer(int $vitesse)
+    public function accelerer(int $vitesse)
     {
-        if (!$this->Move) {
+        if (!$this->move) {
             echo "Le véhicule {$this->marque} {$this->modele} veut accélérer de $vitesse km/h<br>";
             echo "Pour accélérer, il faut démarrer le vehicule {$this->marque} {$this->modele} !<br>";
         } else {
@@ -83,16 +83,16 @@ class Voiture
         }
     }
 
-    public function Stopper()
+    public function stopper()
     {
         $this->vitesseActuelle = 0;
-        $this->Move = false;
+        $this->move = false;
         echo "Le vehicule {$this->marque} {$this->modele} est stoppé<br>";
     }
 
     public function ralentir($vitesse)
     {
-        if ($this->Move && $vitesse <= $this->vitesseActuelle) {
+        if ($this->move && $vitesse <= $this->vitesseActuelle) {
             $this->vitesseActuelle -= $vitesse;
             echo "Le véhicule " . $this->marque . " " . $this->modele . " ralentit de " . $vitesse . " km/h<br>";
         } else if ($vitesse > $this->vitesseActuelle) {
@@ -101,14 +101,14 @@ class Voiture
             echo "Le véhicule " . $this->marque . " " . $this->modele . " est stoppé<br>";
     }
 
-    public function AfficheVitesse()
+    public function afficheVitesse()
     {
         echo "La vitesse du vehicule {$this->marque} {$this->modele} est de : {$this->vitesseActuelle} km/h <br>";
     }
 
-    public function AfficheInfos()
+    public function afficheInfos()
     {
-        $etat = $this->Move ? "est démarré" : "est à l'arrêt";
+        $etat = $this->move ? "est démarré" : "est à l'arrêt";
         echo "<br>
         Nom et modèle du vehicule : {$this->marque} {$this->modele}<br>
         Nombre de portes : {$this->nbPortes}<br>

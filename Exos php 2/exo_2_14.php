@@ -12,11 +12,11 @@ qui hérite (extends) de la classe Voiture et qui a une propriété supplémenta
 </h2>
 
 <?php
-include "classes\Voiture.php";
-include "classes\VoitureElec.php";
+include "classes/Voiture.php";
+include "classes/VoitureElec.php";
 
 $v1 = new Voiture("Peugeot", "408");
 $ve1 = new VoitureElec("BMW","I3",100);
 
-echo $v1->AfficheInfos();
-echo $ve1->AfficheInfos();
+echo $v1->afficheInfos();
+echo $ve1->afficheInfos();

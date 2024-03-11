@@ -15,20 +15,20 @@
 </h2>
 
 <?php
-require "classes\Voiture.php";
+require "classes/Voiture.php";
 
 $v1 = new Voiture("Peugeot", "408", 5);
 $v2 = new Voiture("Citroën", "C4", 3);
 
-$v1->Demarrer();
-$v1->Accelerer(50);
-$v2->Demarrer();
+$v1->demarrer();
+$v1->accelerer(50);
+$v2->demarrer();
 $v2->stopper();
-$v2->Accelerer(20);
+$v2->accelerer(20);
 $v1->ralentir(10);
 
-$v1->AfficheVitesse();
-$v2->AfficheVitesse();
+$v1->afficheVitesse();
+$v2->afficheVitesse();
 
-$v1->AfficheInfos();
-$v2->AfficheInfos();
+$v1->afficheInfos();
+$v2->afficheInfos();
