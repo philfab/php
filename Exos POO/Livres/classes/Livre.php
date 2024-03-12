@@ -16,13 +16,13 @@ class Livre
     private float $prix;
     private DateTime $dateParution;
 
-    public function __construct(string $titre, Auteur $auteur, int $nbPages, float $prix, DateTime $dateParution)
+    public function __construct(string $titre, Auteur $auteur, int $nbPages, float $prix, string $dateParution)
     {
         $this->titre = $titre;
         $this->auteur = $auteur;
         $this->nbPages = $nbPages;
         $this->prix = $prix;
-        $this->dateParution = $dateParution;
+        $this->dateParution = new DateTime($dateParution);
         $auteur->addLivre($this);
     }
 
@@ -66,18 +66,19 @@ class Livre
         $this->prix = $prix;
     }
 
-    public function getDateParution(): DateTime
+    public function getDateParution(): string
     {
-        return $this->dateParution;
+        return $this->dateParution->format("Y");
     }
 
-    public function setDateParution(DateTime $dateParution)
+    public function setDateParution(string $dateParution)
     {
-        $this->dateParution = $dateParution;
+        $this->dateParution = new DateTime($dateParution);
     }
 
     public function __toString()
     {
-        return "Titre : $this->titre, Auteur : $this->auteur, Nombre de pages : $this->nbPages, Prix : $this->prix, Date de parution : $this->dateParution";
+        return "Titre : $this->titre, Auteur : $this->auteur, Nombre de pages : $this->nbPages, Prix : $this->prix, 
+        Date de parution : $this->dateParution";
     }
 }

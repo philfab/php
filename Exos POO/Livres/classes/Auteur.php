@@ -8,16 +8,17 @@ classe Auteur
     - Mutateurs : setNom(string $nom), setPrenom(string $prenom)
     - Fonctions : afficherBibliographie(), getLivres(), addLivre()
 */
-class Auteur{
+class Auteur
+{
     private string $nom;
     private string $prenom;
     private array $livres;
 
     public function __construct(string $nom, string $prenom)
     {
-       $this->nom = $nom;
-       $this->prenom = $prenom;  
-       $this->livres = [];
+        $this->nom = $nom;
+        $this->prenom = $prenom;
+        $this->livres = [];
     }
 
     public function getNom(): string
@@ -42,20 +43,20 @@ class Auteur{
 
     public function afficherBibliographie()
     {
-        $result= "<div style='text-align: justify;margin: 0 auto; width: 40%;'>";
+        $result = "<div style='text-align: justify;margin: 0 auto; width: 40%;'>";
         $result .= "<h2>Livres de " . $this->nom . " " . $this->prenom . "</h2>";
 
-      foreach ($this->livres as $livre){
-        $result.= $livre->getTitre() .  " (" 
-                  . "(" . date_format($livre->getDateParution(), 'Y') . ")"
-                  . " : " . $livre->getNbPages() . " pages"
-                  . " / " . $livre->getPrix() . "€<br/>";      
-      }
+        foreach ($this->livres as $livre) {
+            $result .= $livre->getTitre()
+                . " (" . $livre->getDateParution() . ")"
+                . " : " . $livre->getNbPages() . " pages"
+                . " / " . $livre->getPrix() . "€<br/>";
+        }
 
-      $result .= "</div>";
-      return $result;
+        $result .= "</div>";
+        return $result;
     }
-    
+
     public function getLivres()
     {
         return $this->livres;

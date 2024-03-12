@@ -7,20 +7,22 @@
   - Accesseurs : getNom(), setNom(), getPrenom(), setPrenom(), getDateNaissance(), setDateNaissance(), getVille(), setVille()
   - Mutateurs : setNom(string $nom), setPrenom(string $prenom), setDateNaissance(DateTime $dateNaissance), setVille(string $ville)
 */
-class Titulaire{
-        private string $nom;
-        private string $prenom;
-        private DateTime $dateNaissance;
-        private string $ville;
-        private array $comptes;
+class Titulaire
+{
+    private string $nom;
+    private string $prenom;
+    private DateTime $dateNaissance;
+    private string $ville;
+    private array $comptes;
 
-   public function __construct(string $nom, string $prenom, DateTime $dateNaissance, string $ville){
-        $this ->nom = $nom;
-        $this ->prenom = $prenom;
-        $this ->dateNaissance = $dateNaissance;
-        $this ->ville = $ville;
+    public function __construct(string $nom, string $prenom, string $dateNaissance, string $ville)
+    {
+        $this->nom = $nom;
+        $this->prenom = $prenom;
+        $this->dateNaissance = new DateTime($dateNaissance);
+        $this->ville = $ville;
         $this->comptes = [];
-   }
+    }
 
     public function getNom(): string
     {
@@ -42,14 +44,14 @@ class Titulaire{
         $this->prenom = $prenom;
     }
 
-    public function getDateNaissance(): DateTime
+    public function getDateNaissance(): string
     {
-        return $this->dateNaissance;
+        return $this->dateNaissance->format("Y-m-d");
     }
 
-    public function setDateNaissance(DateTime $dateNaissance)
+    public function setDateNaissance(string $dateNaissance)
     {
-        $this->dateNaissance = $dateNaissance;
+        $this->dateNaissance = new DateTime($dateNaissance);
     }
 
     public function getVille(): string
@@ -79,11 +81,11 @@ class Titulaire{
         $result = $this->nom . " " . $this->prenom . ", né à " . $this->ville . ", âgé de " . $diff->format("%y ans") . "<br>";
         $result .= "Comptes du titulaire : <br>";
         foreach ($this->comptes as $compte) {
-            $result .= " - " . $compte->getLibelle() . " : solde " 
-            . $compte->getSolde() . $compte->getDevise() 
-            . " - Titulaire : " . $this->nom . " " . $this->prenom . "<br>";
+            $result .= " - " . $compte->getLibelle() . " : solde "
+                . $compte->getSolde() . $compte->getDevise()
+                . " - Titulaire : " . $this->nom . " " . $this->prenom . "<br>";
         }
-    
+
         return $result;
     }
 }
