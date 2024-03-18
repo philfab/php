@@ -14,15 +14,46 @@
 
 ## Général
 1.	Quel est l’environnement à installer pour exécuter un script PHP ? Citer 2 exemples de logiciels permettant ce contexte
+    R: Vagrant, Wamp, Xamp, Laragon.
 2.	Qu’est-ce qu’un algorithme ?  
+    R: Suite d'instructions :
+       - séquencielles = à la suite l'une des autres
+       - procédurales = appels fonctions
 3.	Qu’est-ce qu’une variable ? Par quel symbole est préfixée une variable en PHP ?
+    R: Emplacement mémoire où l'on va stocker une valeur. Avec le symbole dollar : $
 4.	Qu’est-ce que la portée d’une variable ?
+    R:  dépend du contexte dans lequel la variable est définie > fonction = dans la fonction , boucle = dans la boucle, sinon global au fichier.
 5.	Qu’est-ce qu’une constante ? Quelle est la différence avec une variable ?
+    R: variable dont le contenu reste inchangé.
 6.	Qu’est-ce qu’une superglobale, combien en existent-ils et donner un exemple d’utilisation 
+    R: Une superglobale est une variable globale intégrée, disponible dans tous les contextes du script. Il y a neuf superglobales :
+    $GLOBALS
+    $_SERVER
+    $_REQUEST
+    $_POST
+    $_GET
+    $_FILES
+    $_ENV
+    $_COOKIE
+    $_SESSION
+    // Supposons l'URL: http://exemple.com?nom=Jean
+    echo "Bonjour, " . $_GET['nom']; // Affichera : Bonjour, Jean
+
 7.	Quels sont les différents types (primitifs) que l’on peut associer à une variable en PHP ? Les citer et en donner des exemples (ne pas oublier le type d’une variable sans valeur)
+    R: integer, string, boolean, double, NULL.
 8.	Existe-t-il plusieurs types de tableaux en PHP, si oui lesquels ?
+    R: Oui. Tableaux indexés classiques - Tableaux associatifs (clef-valeur) - Tableaux multidimentionnels.
 9.	Quelles sont les différentes structures de contrôles qu’il existe en algorithmie ? Donner un exemple pour chacune d’entre elles
+    R: En algorithmie, les structures de contrôle sont des instructions qui permettent de diriger le flux d'exécution du code. 
+       Il existe principalement trois types de structures de contrôle :
+       - Séquentielle : Exécute les instructions l'une après l'autre dans l'ordre où elles apparaissent.
+         echo "Bonjour, ";
+         echo "le monde !";
+       - Conditionnelle : if...else :$age = 20; if ($age >= 18) {} else {} ou switch : switch ($jour) {case "":...}
+       - Répétitive  : for ($i = 0; $i < 5; $i++) {} ou while, do...while : ($i < 5) { $i++;}
+    
 10.	Quelle est la fonction PHP permettant de demander la longueur d’une chaîne de caractères ?
+    R: strlen($chaine);
 11.	Qu’est-ce qu’une session ? Quelle fonction permet de démarrer une session en PHP ? Donner un exemple d’utilisation en PHP
 12.	Qu’est-ce qu’un cookie ? Donner un exemple d’utilisation en PHP
 13.	Quelle est la différence entre les instructions « require » et « include » en PHP
