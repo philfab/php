@@ -55,13 +55,33 @@
 10.	Quelle est la fonction PHP permettant de demander la longueur d’une chaîne de caractères ?
     R: strlen($chaine);
 11.	Qu’est-ce qu’une session ? Quelle fonction permet de démarrer une session en PHP ? Donner un exemple d’utilisation en PHP
+    R : Une session permet de conserver les variables accessibles sur plusieurs pages. 
+        Au lieu de stocker les infos sur le navigateur, la session est conservée sur le serveur. 
+        session_start(); > fonction qui permet de démarrer une session.
+        $_SESSION['utilisateur'] = 'nomUtilisateur'; // Définition d'une variable de session 
+        echo 'Utilisateur : ' . $_SESSION['utilisateur'];// Accès à la variable de session sur une autre page.
 12.	Qu’est-ce qu’un cookie ? Donner un exemple d’utilisation en PHP
+    R : Un cookie est un petit fichier de données qu'un site web peut enregistrer sur le navigateur d'un utilisateur. 
+        Il est utilisé pour conserver des informations entre les visites sur un même site, comme les préférences de l'utilisateur ou son statut de connexion.
+        setcookie("utilisateur", "nomUtilisateur", time() + 3600);
+        if(isset($_COOKIE["utilisateur"])) { echo 'Utilisateur : ' . $_COOKIE["utilisateur"];
 13.	Quelle est la différence entre les instructions « require » et « include » en PHP
+    R : require et include sont utilisées pour inclure et exécuter le code contenu dans un fichier spécifique.
+        require produira une erreur fatale (E_COMPILE_ERROR) et arrêtera l'exécution du script si le fichier spécifié ne peut pas être trouvé ou lu.
+        include générera une alerte (E_WARNING) si le fichier spécifié ne peut pas être trouvé ou lu, mais le script continuera à s'exécuter.
 14.	Comment effectuer une redirection en PHP ?
 15.	Définir la partie « front-end » et « back-end » d’une application
+    R : Le "front-end" d'une application se réfère à la partie visible par l'utilisateur, tout ce qui concerne l'interface et l'interaction avec l'utilisateur.
+        (conception graphique ,  éléments d'interface (boutons, menus, animations) avec HTML, CSS, et JavaScript.
+        Le "back-end",désigne la partie serveur de l'application, qui traite la logique métier, les opérations sur les données (requêtes base de données), et les échanges avec le front-end.
 16.	Définir le contrôle de version ? Qu’est-ce que Git ?
+    R : Le contrôle de version est un système qui enregistre les modifications apportées à un fichier ou à un ensemble de fichiers au fil du temps, 
+        de sorte qu'il est possible de rappeler des versions spécifiques ultérieurement.
+        Git est un système de contrôle de version distribué, conçu pour gérer tout type de projet avec rapidité et efficacité. 
+        Git permet à plusieurs développeurs de travailler ensemble sur un même projet en gérant et en suivant les modifications de leurs fichiers.
 17.	Qu’est-ce qu’un CMS ? Citer au moins 2 exemples
-
+    R : Un CMS (Content Management System) est un système de gestion de contenu qui permet de créer, gérer, et modifier des sites web sans avoir besoin de coder directement en HTML 
+        ou dans d'autres langages de programmation. Il offre une interface utilisateur graphique pour faciliter ces opérations, rendant la gestion de sites web accessible aux non-développeurs.
 ## Front-end
 18.	Définir HTML
 19.	Définir CSS
