@@ -82,6 +82,8 @@
 17.	Qu’est-ce qu’un CMS ? Citer au moins 2 exemples
     R : Un CMS (Content Management System) est un système de gestion de contenu qui permet de créer, gérer, et modifier des sites web sans avoir besoin de coder directement en HTML 
         ou dans d'autres langages de programmation. Il offre une interface utilisateur graphique pour faciliter ces opérations, rendant la gestion de sites web accessible aux non-développeurs.
+        WordPress : Très populaire pour la création de blogs, de sites d'entreprise, boutiques en ligne.
+        Joomla : Utilisé pour des sites web complexes et des applications en ligne, offrant une flexibilité et de nombreuses fonctionnalités.
 ## Front-end
 18.	Définir HTML
 19.	Définir CSS
