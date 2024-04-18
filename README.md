@@ -96,8 +96,10 @@
    	les deux autres langages de base du Web et peut stocker des valeurs, faire des opérations ou encore exécuter du code selon certains évènements. C'est un langage orienté prototype, c'est-à-
    	dire semblable à un langage orienté objet, mais sans classe.
 22.	Définir JSON. Dans quel contexte ce format est-il utilisé ? : 
-    Il s'agit d'un moyen textuel de représenter des objets, des tableaux et des données scalaires JavaScript. JSON est relativement facile à lire et à écrire,
-   	tout en restant facile à analyser et à générer pour les logiciels.
+    Il s'agit d'un moyen textuel de représenter des objets, des tableaux et des données scalaires JavaScript. JSON (JavaScript Object Notation) est relativement facile à lire et à écrire,
+   	tout en restant facile à analyser et à générer pour les logiciels.JSON ou JavaScript Object Notation est une représentation sans schéma, en texte clair, de données
+   	structurées basées sur des paires nom/valeur et des listes ordonnées. Même si le format JSON est dérivé de JavaScript, il est supporté soit nativement, soit par l'intermédiaire de
+   	bibliothèques dans la plupart des principaux langages de programmation.
 24.	Peut-on interpréter du Javascript côté serveur ? Si oui, comment ?
 25.	Qu’est-ce qu’un sélecteur CSS ?
 26.	Quelle balise HTML permet de créer un lien hypertexte ?
