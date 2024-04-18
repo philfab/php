@@ -88,7 +88,9 @@
 18.	Définir HTML :
     L'HTML est un langage informatique utilisé sur l'internet. Ce langage est utilisé pour créer des pages web. L'acronyme signifie HyperText Markup Language, ce qui signifie en français 
     "langage de balisage d'hypertexte". Ce langage permet de réaliser de l'hypertexte à base d'une structure de balisage.
-19.	Définir CSS
+19.	Définir CSS : 
+    CSS est l'acronyme anglais de Cascading Style Sheets "feuilles de style en cascade". Le CSS est un langage informatique utilisé sur l'internet pour mettre en forme
+    les fichiers HTML ou XML. Ainsi, les feuilles de style, aussi appelé les fichiers CSS, comprennent du code qui permet de gérer le design d'une page en HTML.
 20.	Définir Javascript
 21.	Définir JSON. Dans quel contexte ce format est-il utilisé ? 
 22.	Peut-on interpréter du Javascript côté serveur ? Si oui, comment ?
