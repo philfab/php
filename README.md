@@ -91,21 +91,24 @@
 19.	Définir CSS : 
     CSS est l'acronyme anglais de Cascading Style Sheets "feuilles de style en cascade". Le CSS est un langage informatique utilisé sur l'internet pour mettre en forme
     les fichiers HTML ou XML. Ainsi, les feuilles de style, aussi appelé les fichiers CSS, comprennent du code qui permet de gérer le design d'une page en HTML.
-20.	Définir Javascript
-21.	Définir JSON. Dans quel contexte ce format est-il utilisé ? 
-22.	Peut-on interpréter du Javascript côté serveur ? Si oui, comment ?
-23.	Qu’est-ce qu’un sélecteur CSS ?
-24.	Quelle balise HTML permet de créer un lien hypertexte ?
-25.	Qu’est-ce qu’une requête AJAX ?
-26.	Quel sélecteur CSS permet de sélectionner tous les éléments d’une classe spécifique ? D’un identifiant spécifique ?
-27.	Définir le responsive design
-28.	Qu’est-ce que le templating ?
-29.	Qu’est-ce qu’une fonction anonyme en Javascript ?
-30.	Quelle méthode JavaScript est utilisée pour ajouter un élément à la fin d'un tableau ?
-31.	Qu’est-ce qu’un « media query » ?
-32.	Qu’est-ce qu’un pseudo élément en CSS ?
-33.	Qu’est-ce que Bootstrap ? Donner d’autres exemples équivalent
-34.	Quand un formulaire HTML est créé, quelles sont les 2 méthodes qui peuvent lui être associées ? Donner la différence entre ces 2 méthodes
+20.	Définir Javascript : 
+    JavaScript est un langage de programmation principalement utilisé sur Internet, en complément de HTML et CSS. Il utilise des scripts pour créer du contenu dynamique. Il complémente ainsi
+   	les deux autres langages de base du Web et peut stocker des valeurs, faire des opérations ou encore exécuter du code selon certains évènements. C'est un langage orienté prototype, c'est-à-
+   	dire semblable à un langage orienté objet, mais sans classe.
+22.	Définir JSON. Dans quel contexte ce format est-il utilisé ? 
+23.	Peut-on interpréter du Javascript côté serveur ? Si oui, comment ?
+24.	Qu’est-ce qu’un sélecteur CSS ?
+25.	Quelle balise HTML permet de créer un lien hypertexte ?
+26.	Qu’est-ce qu’une requête AJAX ?
+27.	Quel sélecteur CSS permet de sélectionner tous les éléments d’une classe spécifique ? D’un identifiant spécifique ?
+28.	Définir le responsive design
+29.	Qu’est-ce que le templating ?
+30.	Qu’est-ce qu’une fonction anonyme en Javascript ?
+31.	Quelle méthode JavaScript est utilisée pour ajouter un élément à la fin d'un tableau ?
+32.	Qu’est-ce qu’un « media query » ?
+33.	Qu’est-ce qu’un pseudo élément en CSS ?
+34.	Qu’est-ce que Bootstrap ? Donner d’autres exemples équivalent
+35.	Quand un formulaire HTML est créé, quelles sont les 2 méthodes qui peuvent lui être associées ? Donner la différence entre ces 2 méthodes
 
 ## UX UI
 35.	Quelle est la différence entre UX Design et UI Design ?
