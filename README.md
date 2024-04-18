@@ -85,7 +85,9 @@
         WordPress : Très populaire pour la création de blogs, de sites d'entreprise, boutiques en ligne.
         Joomla : Utilisé pour des sites web complexes et des applications en ligne, offrant une flexibilité et de nombreuses fonctionnalités.
 ## Front-end
-18.	Définir HTML
+18.	Définir HTML :
+    L'HTML est un langage informatique utilisé sur l'internet. Ce langage est utilisé pour créer des pages web. L'acronyme signifie HyperText Markup Language, ce qui signifie en français 
+    "langage de balisage d'hypertexte". Ce langage permet de réaliser de l'hypertexte à base d'une structure de balisage.
 19.	Définir CSS
 20.	Définir Javascript
 21.	Définir JSON. Dans quel contexte ce format est-il utilisé ? 
