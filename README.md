@@ -100,47 +100,120 @@
    	tout en restant facile à analyser et à générer pour les logiciels.JSON ou JavaScript Object Notation est une représentation sans schéma, en texte clair, de données
    	structurées basées sur des paires nom/valeur et des listes ordonnées. Même si le format JSON est dérivé de JavaScript, il est supporté soit nativement, soit par l'intermédiaire de
    	bibliothèques dans la plupart des principaux langages de programmation.
-24.	Peut-on interpréter du Javascript côté serveur ? Si oui, comment ?
-25.	Qu’est-ce qu’un sélecteur CSS ?
-26.	Quelle balise HTML permet de créer un lien hypertexte ?
-27.	Qu’est-ce qu’une requête AJAX ?
-28.	Quel sélecteur CSS permet de sélectionner tous les éléments d’une classe spécifique ? D’un identifiant spécifique ?
-29.	Définir le responsive design
-30.	Qu’est-ce que le templating ?
-31.	Qu’est-ce qu’une fonction anonyme en Javascript ?
-32.	Quelle méthode JavaScript est utilisée pour ajouter un élément à la fin d'un tableau ?
-33.	Qu’est-ce qu’un « media query » ?
-34.	Qu’est-ce qu’un pseudo élément en CSS ?
-35.	Qu’est-ce que Bootstrap ? Donner d’autres exemples équivalent
-36.	Quand un formulaire HTML est créé, quelles sont les 2 méthodes qui peuvent lui être associées ? Donner la différence entre ces 2 méthodes
+23. Peut-on interpréter du Javascript côté serveur ? Si oui, comment ?
+R : Oui, JavaScript peut être interprété côté serveur grâce à Node.js, un environnement qui permet d'exécuter du JavaScript en dehors d'un navigateur.
+
+24. Qu’est-ce qu’un sélecteur CSS ?
+R : Un sélecteur CSS est une partie de la syntaxe CSS qui cible des éléments HTML pour les styliser. Par exemple, .classe cible tous les éléments avec la classe "classe", tandis que #id cible l'élément avec l'identifiant "id".
+
+25. Quelle balise HTML permet de créer un lien hypertexte ?
+R : La balise <a> est utilisée pour créer un lien hypertexte. Par exemple, <a href="https://www.example.com">Cliquez ici</a> crée un lien vers "https://www.example.com".
+
+26. Qu’est-ce qu’une requête AJAX ?
+R : AJAX (Asynchronous JavaScript and XML) est une technique qui permet de charger des données en arrière-plan sans recharger la page web. Elle est souvent utilisée pour créer des applications web interactives.
+
+27. Quel sélecteur CSS permet de sélectionner tous les éléments d’une classe spécifique ? D’un identifiant spécifique ?
+R : Pour sélectionner tous les éléments d'une classe spécifique, on utilise .nomDeClasse. Pour un identifiant spécifique, on utilise #nomDeID.
+
+28. Définir le responsive design.
+R : Le responsive design est une approche de la conception web qui rend les pages web adaptatives à la taille de l'écran de l'utilisateur, qu'il s'agisse d'un smartphone, d'une tablette ou d'un ordinateur de bureau.
+
+29. Qu’est-ce que le templating ?
+R : Le templating est une technique qui permet de générer des pages HTML dynamiques en utilisant des modèles (templates) qui contiennent des balises de code pour insérer des données dynamiques.
+
+30. Qu’est-ce qu’une fonction anonyme en Javascript ?
+R : Une fonction anonyme est une fonction sans nom, souvent utilisée pour des tâches temporaires ou pour être passée en argument à une autre fonction. Exemple : function() { console.log('Salut !'); }.
+
+31. Quelle méthode JavaScript est utilisée pour ajouter un élément à la fin d'un tableau ?
+R : La méthode push() est utilisée pour ajouter un élément à la fin d'un tableau. Exemple : tableau.push('nouvel élément');.
+
+32. Qu’est-ce qu’un « media query » ?
+R : Un media query est une technique en CSS qui permet d'appliquer des styles différents selon les caractéristiques du périphérique, comme la largeur de l'écran. Par exemple, @media (max-width: 600px) { /* styles ici */ }.
+
+33. Qu’est-ce qu’un pseudo-élément en CSS ?
+R : Un pseudo-élément est une fonctionnalité CSS qui permet de styliser une partie spécifique d'un élément HTML. Par exemple, ::before permet d'ajouter du contenu avant un élément.
+
+34. Qu’est-ce que Bootstrap ? Donner d’autres exemples équivalents.
+R : Bootstrap est un framework CSS open-source qui facilite le développement rapide de sites web réactifs et stylisés. D'autres frameworks similaires incluent Foundation, Bulma, et Tailwind CSS.
+
+35. Quand un formulaire HTML est créé, quelles sont les 2 méthodes qui peuvent lui être associées ? Donner la différence entre ces 2 méthodes.
+R : Les deux méthodes sont GET et POST. GET envoie les données via l'URL, tandis que POST envoie les données dans le corps de la requête. GET est utilisé pour récupérer des données, tandis que POST est utilisé pour soumettre des données.
 
 ## UX UI
-35.	Quelle est la différence entre UX Design et UI Design ?
-36.	Qu’est-ce qu’un wireframe ? 
-37.	Qu’est-ce qu’un prototype ? 
-38.	Qu’est-ce que la hiérarchie visuelle en UI Design ?
-39.	Qu’est-ce que l’accessibilité en UX Design ? 
-40.	Qu’est-ce qu’une grille de mise en page ?
-41.	Qu’est-ce que la notion d’affordance en UX Design ?
-42.	Qu’est-ce qu’un « mobile first design » ?
-IV. Programmation orientée objet (POO)
-43.	Donner une définition de la programmation orientée objet 
-44.	Qu’est-ce qu’une classe ? Comment la déclare-t-on ?
-45.	Qu’est-ce qu’un objet ?
-46.	Définir la notion de propriété / attribut / méthode
-47.	Qu’est-ce que la visibilité d’une propriété ou d’une méthode ? Citer les différents types de visibilité
-48.	Quelle est la méthode spécifique utilisée pour créer un nouvel objet à partir d’une classe ?
-49.	Qu’est-ce que l’encapsulation ?
-50.	Que signifie « étendre une classe » ? Quelle est le concept clé mis en œuvre ? Donner un exemple
-51.	Définir l’opérateur de résolution de portée
-52.	Définir une méthode / propriété statique
-53.	Définir le polymorphisme en POO
-54.	Définir une méthode / classe abstraite ?
-55.	Définir le chaînage de méthodes
-56.	Qu’est-ce que la méthode __toString() ? Existe-t-il d’autres méthodes « magiques »
-57.	Qu’est-ce qu’un « autoload » ?
-58.	Comment appelle-t-on en français les « getters » et les « setters » ?
-59.	Qu’est-ce que la sérialisation en PHP ? 
+36. Quelle est la différence entre UX Design et UI Design ?
+R : L'UX Design (User Experience) se concentre sur l'expérience globale de l'utilisateur lors de l'utilisation d'un produit, tandis que l'UI Design (User Interface) se concentre sur la conception visuelle et interactive de l'interface utilisateur.
+
+37. Qu’est-ce qu’un wireframe ?
+R : Un wireframe est une maquette simplifiée qui représente la structure d'une page ou d'une interface, sans détails visuels. Il sert de guide pour le placement des éléments et la navigation.
+
+38. Qu’est-ce qu’un prototype ?
+R : Un prototype est une version préliminaire d'un produit ou d'une interface, créée pour tester et valider des concepts avant la production finale. Il peut être interactif pour simuler l'expérience utilisateur.
+
+39. Qu’est-ce que la hiérarchie visuelle en UI Design ?
+R : La hiérarchie visuelle est l'organisation des éléments visuels d'une interface pour guider l'attention de l'utilisateur. Elle utilise la taille, la couleur, l'emplacement et d'autres techniques pour mettre en avant les éléments importants.
+
+40. Qu’est-ce que l’accessibilité en UX Design ?
+R : L'accessibilité en UX Design consiste à concevoir des produits qui peuvent être utilisés par le plus grand nombre de personnes possible, y compris celles ayant des handicaps. Cela inclut des pratiques comme l'utilisation de texte alternatif pour les images ou des contrastes de couleurs suffisants.
+
+41. Qu’est-ce qu’une grille de mise en page ?
+R : Une grille de mise en page est un ensemble de lignes directrices utilisées pour organiser les éléments d'une page de manière cohérente et harmonieuse. Elle aide à structurer le contenu et à maintenir l'alignement visuel.
+
+42. Qu’est-ce que la notion d’affordance en UX Design ?
+R : L'affordance fait référence à la capacité d'un élément d'interface à suggérer son usage. Par exemple, un bouton en relief indique qu'il peut être cliqué.
+
+43. Qu’est-ce qu’un « mobile first design » ?
+R : Le "mobile first design" est une approche de conception où le développement commence par la version mobile, puis est étendu aux versions pour des écrans plus larges. Cela garantit que le site fonctionne bien sur les appareils mobiles.
+
+44. Donner une définition de la programmation orientée objet.
+R : La programmation orientée objet (POO) est un paradigme de programmation qui organise le code en objets, chaque objet représentant une instance d'une classe, qui est une abstraction modélisant des concepts réels ou logiques.
+
+45. Qu’est-ce qu’une classe ? Comment la déclare-t-on ?
+R : Une classe est un modèle ou un plan à partir duquel des objets sont créés. En PHP, on la déclare avec le mot-clé class. Exemple : class Animal {}.
+
+46. Qu’est-ce qu’un objet ?
+R : Un objet est une instance d'une classe. C'est une entité autonome avec des propriétés (attributs) et des méthodes (fonctions) qui définissent son comportement.
+
+47. Définir la notion de propriété / attribut / méthode.
+R : Une propriété ou un attribut est une variable associée à un objet, représentant une caractéristique. Une méthode est une fonction associée à un objet, définissant un comportement ou une action.
+
+48. Qu’est-ce que la visibilité d’une propriété ou d’une méthode ? Citer les différents types de visibilité.
+R : La visibilité détermine l'accès aux propriétés ou méthodes d'une classe. Les types de visibilité sont public (accessible partout), protected (accessible dans la classe et ses sous-classes), et private (accessible uniquement dans la classe elle-même).
+
+49. Quelle est la méthode spécifique utilisée pour créer un nouvel objet à partir d’une classe ?
+R : La méthode spécifique est le constructeur, généralement nommée __construct() en PHP. Elle est appelée lors de la création d'un nouvel objet avec new.
+
+50. Qu’est-ce que l’encapsulation ?
+R : L'encapsulation est un principe de la POO qui consiste à restreindre l'accès direct aux propriétés d'un objet et à utiliser des méthodes pour les modifier, protégeant ainsi l'intégrité des données.
+
+51. Que signifie « étendre une classe » ? Quelle est le concept clé mis en œuvre ? Donner un exemple.
+R : Étendre une classe signifie créer une nouvelle classe qui hérite des propriétés et méthodes d'une autre classe. Le concept clé est l'héritage. Exemple : class Chien extends Animal {}.
+
+52. Définir l’opérateur de résolution de portée.
+R : L'opérateur de résolution de portée (::) en PHP permet d'accéder aux méthodes et propriétés statiques d'une classe, ou de faire référence à la classe parente dans une classe dérivée.
+
+53. Définir une méthode / propriété statique.
+R : Une méthode ou propriété statique appartient à la classe elle-même, plutôt qu'à une instance de la classe. On y accède en utilisant l'opérateur ::.
+
+54. Définir le polymorphisme en POO.
+R : Le polymorphisme permet d'utiliser une méthode ou un objet de manière interchangeable, même si les objets ou méthodes appartiennent à des classes différentes, tant qu'ils partagent une interface ou héritent de la même classe.
+
+55. Définir une méthode / classe abstraite ?
+R : Une classe abstraite est une classe qui ne peut pas être instanciée directement et est conçue pour être étendue par d'autres classes. Une méthode abstraite est une méthode déclarée sans implémentation dans une classe abstraite, qui doit être implémentée dans les sous-classes.
+
+56. Définir le chaînage de méthodes.
+R : Le chaînage de méthodes permet d'appeler plusieurs méthodes sur le même objet en une seule instruction. Chaque méthode doit retourner l'objet lui-même ($this). Exemple : $objet->methode1()->methode2();.
+
+57. Qu’est-ce que la méthode __toString() ? Existe-t-il d’autres méthodes « magiques » ?
+R : La méthode __toString() permet de définir comment un objet est converti en chaîne de caractères. Il existe d'autres méthodes magiques en PHP, comme __construct() pour le constructeur, __destruct() pour le destructeur, et __get() pour l'accès dynamique aux propriétés.
+
+58. Qu’est-ce qu’un « autoload » ?
+R : L'autoload est un mécanisme en PHP qui permet de charger automatiquement les classes nécessaires lors de leur première utilisation, sans avoir besoin d'inclure manuellement les fichiers.
+
+59. Comment appelle-t-on en français les « getters » et les « setters » ?
+R : En français, les « getters » sont appelés accesseurs et les « setters » sont appelés mutateurs.
+
+60. Qu’est-ce que la sérialisation en PHP ?
+R : La sérialisation en PHP est le processus de conversion d'un objet en une chaîne de caractères pour le stockage ou la transmission. La désérialisation est l'opération inverse, qui recrée l'objet à partir de la chaîne.
 
 ## Architecture 
 60.	Qu’est-ce que l’architecture client / serveur ? Grâce à quel type de requête peut-on interroger le serveur. Définir l’acronyme de ce type de requête. Si on ajoute un « S » à cet acronyme, expliquer la différence
