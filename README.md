@@ -14,17 +14,22 @@
 
 ## Général
 1.	Quel est l’environnement à installer pour exécuter un script PHP ? Citer 2 exemples de logiciels permettant ce contexte
+    Dossier PHP qui contient les sources pour faire fonctionner une application PHP. S'y trouve aussi (sinon il 
+    faut le créer) le fichier php.ini qui sert à customiser votre environnement PHP. Si le chemin (path) de ce
+    dossier est inclus dans les variables d'environnement du système, vous aurez accés à l'environnement php
+    partout dans votre OS, notemment dans les shells comme cmd, powershell, bash...
     R: Vagrant, Wamp, Xamp, Laragon.
 2.	Qu’est-ce qu’un algorithme ?  
-    R: Suite d'instructions :
+    R: C'est une suite d'instructions exécutées par un programme, du haut vers le bas et de droite vers la 
+       gauche : 
        - séquencielles = à la suite l'une des autres
-       - procédurales = appels fonctions
+       - procédurales = appels de fonctions, de propriétés ou d'évènements.
 3.	Qu’est-ce qu’une variable ? Par quel symbole est préfixée une variable en PHP ?
     R: Emplacement mémoire où l'on va stocker une valeur. Avec le symbole dollar : $
 4.	Qu’est-ce que la portée d’une variable ?
     R:  dépend du contexte dans lequel la variable est définie > fonction = dans la fonction , boucle = dans la boucle, sinon global au fichier.
 5.	Qu’est-ce qu’une constante ? Quelle est la différence avec une variable ?
-    R: variable dont le contenu reste inchangé.
+    R: emplacement mémoire dont le contenu reste inchangé.
 6.	Qu’est-ce qu’une superglobale, combien en existent-ils et donner un exemple d’utilisation 
     R: Une superglobale est une variable globale intégrée, disponible dans tous les contextes du script. Il y a neuf superglobales :
     $GLOBALS
