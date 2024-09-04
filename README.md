@@ -260,7 +260,8 @@ R : La modélisation de données est le processus de création d'un modèle visu
 R : a. Analyse, conception et réalisation.
 
 70. Qu’est-ce qu’un modèle conceptuel de données (MCD) en Merise ?
-R : Un MCD est une représentation graphique des entités et des relations dans un système d'information, sans se soucier des contraintes techniques.
+R : Un MCD est une représentation la plus abstraite du système d'informations des entités et des relations dans un système d'information, sans se soucier des contraintes
+techniques.
 
 71. Qu’est-ce qu’un modèle logique de données (MLD) en Merise ?
 R : Un MLD est une traduction du MCD en termes techniques, en tenant compte des contraintes du SGBD (Système de Gestion de Base de Données).
@@ -273,7 +274,7 @@ R : Un MLD est une traduction du MCD en termes techniques, en tenant compte des 
     d. Clé primaire / clé étrangère : Une clé primaire identifie de manière unique un enregistrement dans une table, tandis qu'une clé étrangère est une référence à une clé primaire dans une autre table.
 
 73. Que devient une relation de type « Many To Many » dans le modèle logique de données ?
-R : Une relation "Many To Many" devient généralement deux relations "One To Many" avec une table d'association pour gérer les liens entre les entités.
+R : Une relation "Many To Many" devient généralement deux relations "One To Many" avec une table associative pour gérer les liens entre les entités.
 
 74. Qu’est-ce qu’une base de données ?
 R : Une base de données est un ensemble organisé de données structurées, stockées électroniquement dans un système informatique.
@@ -300,7 +301,12 @@ R : Une vue est une requête SQL stockée qui permet de présenter les données 
 R : L'intégrité référentielle est une contrainte qui garantit que les relations entre les tables restent cohérentes, par exemple en empêchant la suppression d'un enregistrement référencé par une clé étrangère.
 
 81. Quelles sont les fonctions d’agrégation en SQL ?
-R : Les fonctions d'agrégation en SQL sont des fonctions qui opèrent sur un ensemble de valeurs pour en retourner une seule. Exemples : SUM(), AVG(), COUNT(), MAX(), MIN().
+R : Les fonctions d'agrégation en SQL sont des fonctions qui opèrent sur un ensemble de valeurs pour en retourner une seule. Exemples : 
+SUM() : somme totale d'une colonne d'une table (ou jeu de résultat)
+AVG() : moyenne totale d'une colonne d'une table (ou jeu de résultat)
+COUNT() : nombre de lignes (rows) dans une table (ou jeu de résultat)
+MAX() : retourne le nombre maximum d'une colonne
+MIN() : retourne le nombre minimum d'une colonne
 
 82. Qu’est-ce qu’un CRUD dans le contexte d’une base de données ?
 R : CRUD signifie Create, Read, Update, Delete, qui sont les quatre opérations de base pour manipuler des données dans une base de données.
@@ -323,7 +329,7 @@ R : Pour se connecter à une base de données en PHP, on utilise la classe PDO (
 R : Symfony est un framework PHP open-source qui facilite le développement d'applications web robustes et maintenables.
 
 86. Sur quel langage de programmation et design pattern repose Symfony ?
-R : Symfony repose sur le langage PHP et implémente principalement le design pattern MVC (Model-View-Controller).
+R : Symfony repose sur le langage PHP et implémente principalement le design pattern MVP (Model View Presenter).
 
 87. Quelle est la dernière version en date de Symfony ?
 R : La dernière version de Symfony est la version 6.4 (août 2024).
@@ -335,7 +341,7 @@ R : Un bundle dans Symfony est un paquetage de fonctionnalités regroupées ense
 R : Le moteur de template utilisé par défaut dans Symfony est Twig.
 
 90. Qu’est-ce qu’un ORM ? Quel est son utilité et comment s’appelle-t-il au sein de Symfony ?
-R : Un ORM (Object-Relational Mapping) est un outil qui permet de manipuler une base de données en utilisant des objets plutôt que des requêtes SQL. Dans Symfony, l'ORM s'appelle Doctrine.
+R : Un ORM (Object-Relational Mapping) est un outil qui permet de manipuler une base de données en utilisant des objets plutôt que des requêtes SQL. Dans Symfony, l'ORM s'appelle Doctrine. C'est un système qui simplifie l'interaction avec les éléments sous-jacents en masquant les détails complexes. Avec Doctrine (ou Eloquent) le développeur n'a plus besoin d'écrire des requêtes SQL explicites.
 
 91. Qu’est-ce que l’injection de dépendances ? Quel est l’outil utilisé dans ce contexte et quel fichier contient l’intégralité des dépendances du projet ?
 R : L'injection de dépendances est un concept où un objet reçoit les dépendances dont il a besoin au lieu de les créer lui-même. Dans Symfony, cela est géré par le conteneur de services. Le fichier services.yaml contient les dépendances du projet.
@@ -358,9 +364,17 @@ R : La faille XSS (Cross-Site Scripting) permet à un attaquant d'injecter du co
 
 97. Qu’est-ce que la faille CSRF ? Comment s’en prémunir ?
 R : La faille CSRF (Cross-Site Request Forgery) permet à un attaquant de faire exécuter des actions à un utilisateur authentifié sans son consentement. Pour s'en prémunir, on utilise des tokens CSRF pour valider les requêtes.
+Pour s'en prémunir on crée un jeton unique (token) que l'on envoie au serveur à chaque requête envoyé par l'utilisateur pour validation auprés de celui-ci.
+Génération du token :
+Le serveur génère un jeton unique et le stocke dans la session de l'user.
+Le même jeton est ensuite inclus dans les formulaires ou les requêtes de l'application côté client (souvent dans un champ caché ou un en-tête HTTP).
+Validation du token :
+Lorsqu'une requête est envoyée, le serveur vérifie que le token fourni dans la requête correspond à celui stocké dans la session.
+Si le jeton est valide la requête est acceptée sinon elle est rejetée. 
 
 98. Définir l’attaque par force brute et l’attaque par dictionnaire.
 R : L'attaque par force brute consiste à essayer toutes les combinaisons possibles de mots de passe jusqu'à trouver le bon. L'attaque par dictionnaire essaie une liste de mots de passe courants.
+On peut se prémunir contre ces attaques en complexifiant les mots de passe (min 8 caractères, maj-min, caractères spéciaux, pas de noms courants...), aussi en les modifiant fréquemment.
 
 99. Existe-t-il d’autres failles de sécurité ? Citer celles-ci et expliquer simplement leur comportement.
 R : Oui, d'autres failles incluent :
