@@ -25,27 +25,34 @@
        - séquencielles = à la suite l'une des autres
        - procédurales = appels de fonctions, de propriétés ou d'évènements.
 3.	Qu’est-ce qu’une variable ? Par quel symbole est préfixée une variable en PHP ?
-    R: Emplacement mémoire où l'on va stocker une valeur. Avec le symbole dollar : $
+    R: Emplacement mémoire où l'on va stocker une valeur. 
+    Avec le symbole dollar : $
 4.	Qu’est-ce que la portée d’une variable ?
     R:  dépend du contexte dans lequel la variable est définie > fonction = dans la fonction , boucle = dans la boucle, sinon global au fichier.
 5.	Qu’est-ce qu’une constante ? Quelle est la différence avec une variable ?
     R: emplacement mémoire dont le contenu reste inchangé.
 6.	Qu’est-ce qu’une superglobale, combien en existent-ils et donner un exemple d’utilisation 
     R: Une superglobale est une variable globale intégrée, disponible dans tous les contextes du script. Il y a neuf superglobales :
-    $GLOBALS
-    $_SERVER
-    $_REQUEST
-    $_POST
-    $_GET
-    $_FILES
-    $_ENV
-    $_COOKIE
-    $_SESSION
+    $GLOBALS : tableau associatif qui stocke les données globales (déconseillé car moins sécurisé). Les données 
+    sont disponibles uniquement pendant l'exécution du script.
+    $_SERVER : Tableau associatif qui contient les informations relatives au server : nom, méthode HTTP
+    utilisée... 
+    $_REQUEST : Ttableau associatif qui contient les données issues de $_GET, $_POST, et $_COOKIE. Elle permet 
+    donc d'accéder aux infos soumises via ces trois méthodes sans avoir à spécifier laquelle est utilisée.
+    $_POST :  Tableau associatif qui contient les données envoyées au serveur avec la méthode POST.
+    $_GET : Tableau associatif qui contient les données envoyées au serveur avec la méthode GET (URL).
+    $_FILES : Tableau associatif qui contient les fichiers (champs type file) envoyés au serveur via un 
+    formulaire.
+    $_ENV :  Tableau associatif qui contient les données d'environnement (.env).
+    $_COOKIE : Tableau associatif qui contient les cookies envoyés par le navigateur au serveur.
+    $_SESSION :  Les données de session persistent entre plusieurs requêtes. Elles permettent de conserver des
+    informations pour un utilisateur d'une page à l'autre (tant que la session est active).
     // Supposons l'URL: http://exemple.com?nom=Jean
     echo "Bonjour, " . $_GET['nom']; // Affichera : Bonjour, Jean
 
-7.	Quels sont les différents types (primitifs) que l’on peut associer à une variable en PHP ? Les citer et en donner des exemples (ne pas oublier le type d’une variable sans valeur)
-    R: integer, string, boolean, double, NULL.
+7.	Quels sont les différents types (primitifs) que l’on peut associer à une variable en PHP ? Les citer et en
+    donner des exemples (ne pas oublier le type d’une variable sans valeur)
+    R: integer, string, boolean, double, float, NULL, tableaux, objets.
 8.	Existe-t-il plusieurs types de tableaux en PHP, si oui lesquels ?
     R: Oui. Tableaux indexés classiques - Tableaux associatifs (clef-valeur) - Tableaux multidimentionnels.
 9.	Quelles sont les différentes structures de contrôles qu’il existe en algorithmie ? Donner un exemple pour chacune d’entre elles
@@ -75,6 +82,9 @@
         require produira une erreur fatale (E_COMPILE_ERROR) et arrêtera l'exécution du script si le fichier spécifié ne peut pas être trouvé ou lu.
         include générera une alerte (E_WARNING) si le fichier spécifié ne peut pas être trouvé ou lu, mais le script continuera à s'exécuter.
 14.	Comment effectuer une redirection en PHP ?
+    R : Pour effectuer une redirection en PHP, on peut utiliser la fonction header() avec l'instruction
+        Location : header("Location: http://www.exemple.com"); exit;
+    Il est recommandé d'utiliser 'exit' juste après l'appel à header().
 15.	Définir la partie « front-end » et « back-end » d’une application
     R : Le "front-end" d'une application se réfère à la partie visible par l'utilisateur, tout ce qui concerne l'interface et l'interaction avec l'utilisateur.
         (conception graphique ,  éléments d'interface (boutons, menus, animations) avec HTML, CSS, et JavaScript.
@@ -94,7 +104,7 @@
     L'HTML est un langage informatique utilisé sur l'internet. Ce langage est utilisé pour créer des pages web. L'acronyme signifie HyperText Markup Language, ce qui signifie en français 
     "langage de balisage d'hypertexte". Ce langage permet de réaliser de l'hypertexte à base d'une structure de balisage.
 19.	Définir CSS : 
-    CSS est l'acronyme anglais de Cascading Style Sheets "feuilles de style en cascade". Le CSS est un langage informatique utilisé sur l'internet pour mettre en forme
+    CSS est l'acronyme anglais de Cascading Style Sheets "feuilles de style en cascade". Le CSS est un langage informatique utilisé sur l'internet pour mettre en forme (mise en page)
     les fichiers HTML ou XML. Ainsi, les feuilles de style, aussi appelé les fichiers CSS, comprennent du code qui permet de gérer le design d'une page en HTML.
 20.	Définir Javascript : 
     JavaScript est un langage de programmation principalement utilisé sur Internet, en complément de HTML et CSS. Il utilise des scripts pour créer du contenu dynamique. Il complémente ainsi
@@ -112,7 +122,7 @@ R : Oui, JavaScript peut être interprété côté serveur grâce à Node.js, un
 R : Un sélecteur CSS est une partie de la syntaxe CSS qui cible des éléments HTML pour les styliser. Par exemple, .classe cible tous les éléments avec la classe "classe", tandis que #id cible l'élément avec l'identifiant "id".
 
 25. Quelle balise HTML permet de créer un lien hypertexte ?
-R : La balise <a> est utilisée pour créer un lien hypertexte. Par exemple, <a href="https://www.example.com">Cliquez ici</a> crée un lien vers "https://www.example.com".
+R : La balise <a> (anchor) est utilisée pour créer un lien hypertexte. Par exemple, <a href="https://www.example.com">Cliquez ici</a> crée un lien vers "https://www.example.com".
 
 26. Qu’est-ce qu’une requête AJAX ?
 R : AJAX (Asynchronous JavaScript and XML) est une technique qui permet de charger des données en arrière-plan sans recharger la page web. Elle est souvent utilisée pour créer des applications web interactives.
@@ -200,7 +210,7 @@ R : L'opérateur de résolution de portée (::) en PHP permet d'accéder aux mé
 R : Une méthode ou propriété statique appartient à la classe elle-même, plutôt qu'à une instance de la classe. On y accède en utilisant l'opérateur ::.
 
 54. Définir le polymorphisme en POO.
-R : Le polymorphisme permet d'utiliser une méthode ou un objet de manière interchangeable, même si les objets ou méthodes appartiennent à des classes différentes, tant qu'ils partagent une interface ou héritent de la même classe.
+R : Le polymorphisme permet d'utiliser une méthode ou un objet de manière interchangeable, même si les objets ou méthodes appartiennent à des classes différentes, tant qu'ils partagent une interface ou héritent de la même classe : S'il y a une classe 'vehicule' qui implémente le méthode 'rouler' et si deux classes héritent (enfants) de cette classe vehicule, par exemple voiture et velo, lorsque velo ou voiture appellent rouler : c'est du polymorphisme.
 
 55. Définir une méthode / classe abstraite ?
 R : Une classe abstraite est une classe qui ne peut pas être instanciée directement et est conçue pour être étendue par d'autres classes. Une méthode abstraite est une méthode déclarée sans implémentation dans une classe abstraite, qui doit être implémentée dans les sous-classes.
