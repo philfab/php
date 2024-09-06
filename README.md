@@ -19,25 +19,30 @@
     dossier est inclus dans les variables d'environnement du système, vous aurez accés à l'environnement php
     partout dans votre OS, notamment dans les shells comme cmd, powershell, bash...
     R: Vagrant, Wamp, Xamp, Laragon.
+
 2.	Qu’est-ce qu’un algorithme ?  
     R: C'est une suite d'instructions exécutées par un programme, du haut vers le bas et de droite vers la 
        gauche : 
        - séquencielles = à la suite l'une des autres
        - procédurales = appels de fonctions, de propriétés ou d'évènements.
+
 3.	Qu’est-ce qu’une variable ? Par quel symbole est préfixée une variable en PHP ?
     R: Emplacement mémoire où l'on va stocker une valeur. 
     Avec le symbole dollar : $
+
 4.	Qu’est-ce que la portée d’une variable ?
+
     R:  dépend du contexte dans lequel la variable est définie > fonction = dans la fonction , boucle = dans la boucle, sinon global au fichier.
 5.	Qu’est-ce qu’une constante ? Quelle est la différence avec une variable ?
     R: emplacement mémoire dont le contenu reste inchangé.
+
 6.	Qu’est-ce qu’une superglobale, combien en existent-ils et donner un exemple d’utilisation 
     R: Une superglobale est une variable globale intégrée, disponible dans tous les contextes du script. Il y a neuf superglobales :
     $GLOBALS : tableau associatif qui stocke les données globales (déconseillé car moins sécurisé). Les données 
     sont disponibles uniquement pendant l'exécution du script.
     $_SERVER : Tableau associatif qui contient les informations relatives au server : nom, méthode HTTP
     utilisée... 
-    $_REQUEST : Ttableau associatif qui contient les données issues de $_GET, $_POST, et $_COOKIE. Elle permet 
+    $_REQUEST : Tableau associatif qui contient les données issues de $_GET, $_POST, et $_COOKIE. Elle permet 
     donc d'accéder aux infos soumises via ces trois méthodes sans avoir à spécifier laquelle est utilisée.
     $_POST :  Tableau associatif qui contient les données envoyées au serveur avec la méthode POST.
     $_GET : Tableau associatif qui contient les données envoyées au serveur avec la méthode GET (URL).
@@ -53,8 +58,10 @@
 7.	Quels sont les différents types (primitifs) que l’on peut associer à une variable en PHP ? Les citer et en
     donner des exemples (ne pas oublier le type d’une variable sans valeur)
     R: integer, string, boolean, double, float, NULL, tableaux, objets.
+
 8.	Existe-t-il plusieurs types de tableaux en PHP, si oui lesquels ?
     R: Oui. Tableaux indexés classiques - Tableaux associatifs (clef-valeur) - Tableaux multidimentionnels.
+
 9.	Quelles sont les différentes structures de contrôles qu’il existe en algorithmie ? Donner un exemple pour chacune d’entre elles
     R: En algorithmie, les structures de contrôle sont des instructions qui permettent de diriger le flux d'exécution du code. 
        Il existe principalement trois types de structures de contrôle :
@@ -66,6 +73,7 @@
     
 10.	Quelle est la fonction PHP permettant de demander la longueur d’une chaîne de caractères ?
     R: strlen($chaine);
+
 11.	Qu’est-ce qu’une session ? Quelle fonction permet de démarrer une session en PHP ? Donner un exemple d’utilisation en PHP
     R : Une session permet de conserver les variables accessibles sur plusieurs pages. 
         Au lieu de stocker les infos sur le navigateur, la session est conservée sur le serveur. 
@@ -77,44 +85,46 @@
         Il est utilisé pour conserver des informations entre les visites sur un même site, comme les préférences de l'utilisateur ou son statut de connexion.
         setcookie("utilisateur", "nomUtilisateur", time() + 3600);
         if(isset($_COOKIE["utilisateur"])) { echo 'Utilisateur : ' . $_COOKIE["utilisateur"];
+
 13.	Quelle est la différence entre les instructions « require » et « include » en PHP
     R : require et include sont utilisées pour inclure et exécuter le code contenu dans un fichier spécifique.
         require produira une erreur fatale (E_COMPILE_ERROR) et arrêtera l'exécution du script si le fichier spécifié ne peut pas être trouvé ou lu.
         include générera une alerte (E_WARNING) si le fichier spécifié ne peut pas être trouvé ou lu, mais le script continuera à s'exécuter.
+
 14.	Comment effectuer une redirection en PHP ?
     R : Pour effectuer une redirection en PHP, on peut utiliser la fonction header() avec l'instruction
         Location : header("Location: http://www.exemple.com"); exit;
     Il est recommandé d'utiliser 'exit' juste après l'appel à header().
+
 15.	Définir la partie « front-end » et « back-end » d’une application
     R : Le "front-end" d'une application se réfère à la partie visible par l'utilisateur, tout ce qui concerne l'interface et l'interaction avec l'utilisateur.
         (conception graphique ,  éléments d'interface (boutons, menus, animations) avec HTML, CSS, et JavaScript.
         Le "back-end",désigne la partie serveur de l'application, qui traite la logique métier, les opérations sur les données (requêtes base de données), et les échanges avec le front-end.
+
 16.	Définir le contrôle de version ? Qu’est-ce que Git ?
     R : Le contrôle de version est un système qui enregistre les modifications apportées à un fichier ou à un ensemble de fichiers au fil du temps, 
         de sorte qu'il est possible de rappeler des versions spécifiques ultérieurement.
         Git est un système de contrôle de version distribué, conçu pour gérer tout type de projet avec rapidité et efficacité. 
         Git permet à plusieurs développeurs de travailler ensemble sur un même projet en gérant et en suivant les modifications de leurs fichiers.
+
 17.	Qu’est-ce qu’un CMS ? Citer au moins 2 exemples
-    R : Un CMS (Content Management System) est un système de gestion de contenu qui permet de créer, gérer, et modifier des sites web sans avoir besoin de coder directement en HTML 
-        ou dans d'autres langages de programmation. Il offre une interface utilisateur graphique pour faciliter ces opérations, rendant la gestion de sites web accessible aux non-développeurs.
+    R : Un CMS (Content Management System) est un système de gestion de contenu qui permet de créer, gérer, et modifier des sites web sans avoir besoin de coder directement en HTML ou dans d'autres langages de programmation. Il offre une interface utilisateur graphique pour faciliter ces opérations, rendant la gestion de sites web accessible aux non-développeurs.
         WordPress : Très populaire pour la création de blogs, de sites d'entreprise, boutiques en ligne.
         Joomla : Utilisé pour des sites web complexes et des applications en ligne, offrant une flexibilité et de nombreuses fonctionnalités.
+
 ## Front-end
 18.	Définir HTML :
-    L'HTML est un langage informatique utilisé sur l'internet. Ce langage est utilisé pour créer des pages web. L'acronyme signifie HyperText Markup Language, ce qui signifie en français 
-    "langage de balisage d'hypertexte". Ce langage permet de réaliser de l'hypertexte à base d'une structure de balisage.
+    L'HTML est un langage informatique utilisé sur l'internet. Ce langage est utilisé pour créer des pages web. L'acronyme signifie HyperText Markup Language, ce qui signifie en français "langage de balisage d'hypertexte". Ce langage permet de réaliser de l'hypertexte à base d'une structure de balisage.
+
 19.	Définir CSS : 
-    CSS est l'acronyme anglais de Cascading Style Sheets "feuilles de style en cascade". Le CSS est un langage informatique utilisé sur l'internet pour mettre en forme (mise en page)
-    les fichiers HTML ou XML. Ainsi, les feuilles de style, aussi appelé les fichiers CSS, comprennent du code qui permet de gérer le design d'une page en HTML.
+    CSS est l'acronyme anglais de Cascading Style Sheets "feuilles de style en cascade". Le CSS est un langage informatique utilisé sur l'internet pour mettre en forme (mise en page) les fichiers HTML ou XML. Ainsi, les feuilles de style, aussi appelé les fichiers CSS, comprennent du code qui permet de gérer le design d'une page en HTML.
+
 20.	Définir Javascript : 
-    JavaScript est un langage de programmation principalement utilisé sur Internet, en complément de HTML et CSS. Il utilise des scripts pour créer du contenu dynamique. Il complémente ainsi
-   	les deux autres langages de base du Web et peut stocker des valeurs, faire des opérations ou encore exécuter du code selon certains évènements. C'est un langage orienté prototype, c'est-à-
-   	dire semblable à un langage orienté objet, mais sans classe.
+    JavaScript est un langage de programmation principalement utilisé sur Internet, en complément de HTML et CSS. Il utilise des scripts pour créer du contenu dynamique. Il complémente ainsi	les deux autres langages de base du Web et peut stocker des valeurs, faire des opérations ou encore exécuter du code selon certains évènements. C'est un langage orienté prototype, c'est-à-dire semblable à un langage orienté objet, mais sans classe.
+
 22.	Définir JSON. Dans quel contexte ce format est-il utilisé ? : 
-    Il s'agit d'un moyen textuel de représenter des objets, des tableaux et des données scalaires JavaScript. JSON (JavaScript Object Notation) est relativement facile à lire et à écrire,
-   	tout en restant facile à analyser et à générer pour les logiciels.JSON ou JavaScript Object Notation est une représentation sans schéma, en texte clair, de données
-   	structurées basées sur des paires nom/valeur et des listes ordonnées. Même si le format JSON est dérivé de JavaScript, il est supporté soit nativement, soit par l'intermédiaire de
-   	bibliothèques dans la plupart des principaux langages de programmation.
+    Il s'agit d'un moyen textuel de représenter des objets, des tableaux et des données scalaires JavaScript. JSON (JavaScript Object Notation) est relativement facile à lire et à écrire, tout en restant facile à analyser et à générer pour les logiciels. JSON ou JavaScript Object Notation est une représentation sans schéma, en texte clair, de données structurées basées sur des paires nom/valeur et des listes ordonnées. Même si le format JSON est dérivé de JavaScript, il est supporté soit nativement, soit par l'intermédiaire de bibliothèques dans la plupart des principaux langages de programmation.
+
 23. Peut-on interpréter du Javascript côté serveur ? Si oui, comment ?
 R : Oui, JavaScript peut être interprété côté serveur grâce à Node.js, un environnement qui permet d'exécuter du JavaScript en dehors d'un navigateur.
 
@@ -267,7 +277,6 @@ techniques.
 R : Un MLD est une traduction du MCD en termes techniques, en tenant compte des contraintes du SGBD (Système de Gestion de Base de Données).
 
 72. Donner la définition des mots suivants :
-
     a. Entité : Un objet ou un concept identifiable dans un système d'information.
     b. Relation : Un lien entre deux ou plusieurs entités.
     c. Cardinalité : Le nombre de relations possibles entre des entités.
@@ -312,7 +321,6 @@ MIN() : retourne le nombre minimum d'une colonne
 R : CRUD signifie Create, Read, Update, Delete, qui sont les quatre opérations de base pour manipuler des données dans une base de données.
 
 83. Quelles sont les clauses qui permettent de :
-
     a. Insérer un nouvel enregistrement dans une table : INSERT INTO
     b. Modifier un enregistrement dans une table : UPDATE
     c. Supprimer un enregistrement dans une table : DELETE
@@ -324,6 +332,7 @@ R : CRUD signifie Create, Read, Update, Delete, qui sont les quatre opérations 
 
 84. Comment se connecter à une base de données en PHP ? Quelle est la classe native utilisée ?
 R : Pour se connecter à une base de données en PHP, on utilise la classe PDO (PHP Data Objects). Exemple : $pdo = new PDO('mysql:host=localhost;dbname=test', 'username', 'password');.
+
 ## Symfony
 85. Qu’est-ce que Symfony ?
 R : Symfony est un framework PHP open-source qui facilite le développement d'applications web robustes et maintenables.
