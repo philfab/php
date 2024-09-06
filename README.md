@@ -17,7 +17,7 @@
     Dossier PHP qui contient les sources pour faire fonctionner une application PHP. S'y trouve aussi (sinon il 
     faut le créer) le fichier php.ini qui sert à customiser votre environnement PHP. Si le chemin (path) de ce
     dossier est inclus dans les variables d'environnement du système, vous aurez accés à l'environnement php
-    partout dans votre OS, notemment dans les shells comme cmd, powershell, bash...
+    partout dans votre OS, notamment dans les shells comme cmd, powershell, bash...
     R: Vagrant, Wamp, Xamp, Laragon.
 2.	Qu’est-ce qu’un algorithme ?  
     R: C'est une suite d'instructions exécutées par un programme, du haut vers le bas et de droite vers la 
